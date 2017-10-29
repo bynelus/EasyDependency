@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EasyDependency_Example' do
+  pod 'EasyDependency', :path => '../'
+
+  target 'EasyDependency_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
