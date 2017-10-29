@@ -1,0 +1,6 @@
+framework module EasyDependency {
+  umbrella header "EasyDependency-umbrella.h"
+
+  export *
+  module * { export * }
+}

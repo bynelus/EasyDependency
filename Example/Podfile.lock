@@ -1,0 +1,16 @@
+PODS:
+  - EasyDependency (0.1.0)
+
+DEPENDENCIES:
+  - EasyDependency (from `../`)
+
+EXTERNAL SOURCES:
+  EasyDependency:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EasyDependency: 82753cddf55dbae33e821787cb0299fee99c6406
+
+PODFILE CHECKSUM: 565b036cb86ab6cd40146c2795ab771bb931d154
+
+COCOAPODS: 1.3.1
