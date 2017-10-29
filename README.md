@@ -28,7 +28,8 @@ pod 'EasyDependency'
 
 ## Summary
 
-A very easy way to make use of a dependency container.. WIP!!!
+EasyDependency is a very lightweight dependency injection framework, without magic. Just a container to register and resolve dependencies.
+There is no focus on adding support for circular dependencies or automatic injection of dependencies. Simplicity is key.
 
 ## Features
 
