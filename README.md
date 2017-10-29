@@ -87,7 +87,7 @@ This concept is created together with Jelle Heemskerk ([Github](https://github.c
 
 ## Author
 
-NielsKoole, niels@made2pay.com
+NielsKoole ([Twitter](https://twitter.com/nielskoole))
 
 ## License
 

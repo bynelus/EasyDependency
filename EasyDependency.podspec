@@ -16,7 +16,7 @@ There is no focus on adding support for circular dependencies or automatic injec
                        DESC
   s.homepage         = 'https://github.com/NielsKoole/EasyDependency'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'NielsKoole' => 'niels@made2pay.com' }
+  s.author           = { 'NielsKoole' => 'nielskoole@icloud.com' }
   s.source           = { :git => 'https://github.com/NielsKoole/EasyDependency.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/NielsKoole'
   s.ios.deployment_target = '8.0'

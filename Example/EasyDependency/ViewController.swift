@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         let featureContainer = FeatureContainer(container: appContainer)
         let storageImplementation: Storage? = try? featureContainer.resolve(Storage.self)
+        dump(storageImplementation)
     }
 }
 
