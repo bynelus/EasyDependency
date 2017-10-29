@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
 EasyDependency is a very lightweight dependency injection framework, without magic. Just a container to register and resolve dependencies.
 There is no focus on adding support for circular dependencies or automatic injection of dependencies. Simplicity is key.
                        DESC
-  s.homepage         = 'https://github.com/NielsKoole/EasyDependency'
+  s.homepage         = 'https://github.com/bynelus/EasyDependency'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'NielsKoole' => 'nielskoole@icloud.com' }
-  s.source           = { :git => 'https://github.com/NielsKoole/EasyDependency.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/bynelus/EasyDependency.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/NielsKoole'
   s.ios.deployment_target = '8.0'
   s.source_files = 'EasyDependency/Classes/**/*'
