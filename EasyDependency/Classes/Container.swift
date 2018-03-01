@@ -29,7 +29,7 @@ extension Container {
         registrations.append(registration)
     }
     
-    public func resolve<T>(_ interface: T.Type) throws -> T {
+    public func resolve<T>(_ interface: T.Type = T.self) throws -> T {
         for object in registrations {
             if let registration = object as? Registration<T> {
                 return registration.resolve()
