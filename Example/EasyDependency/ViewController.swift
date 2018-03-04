@@ -12,14 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        // Do any additional setup after loading the view, typically from a nib.
         let appContainer = AppContainer()
-        appContainer.register { StorageAImpl() as Storage }
-        appContainer.register { StorageBImpl() as Storage }
+        appContainer.register(Storage.self) { StorageAImpl() }
         
         let featureContainer = FeatureContainer(container: appContainer)
-        let storageImplementation: Storage? = try? featureContainer.resolve(Storage.self)
+        featureContainer.register(Storage.self) { StorageBImpl() }
+        
+        let storageImplementation: Storage? = try? featureContainer.resolve()
         let storageList: [Storage] = featureContainer.resolveList()
         
         dump(storageImplementation)

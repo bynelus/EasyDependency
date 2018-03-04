@@ -21,7 +21,7 @@ public protocol Container: AnyObject {
 
 extension Container {
     
-    public func register<T>(_ handler: @escaping () -> T) {
+    public func register<T>(_ interface: T.Type, _ handler: @escaping () -> T) {
         let registration = Registration<T> { () -> T in
             return handler()
         }

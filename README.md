@@ -59,7 +59,8 @@ This way you register an implementation on a protocol.
 
 ```swift
 let appContainer = AppContainer()
-appContainer.register { StorageAImpl() as Storage }
+appContainer.register(Storage.self) { StorageAImpl() }
+appContainer.register(Storage.self) { StorageBImpl() }
 ```
 
 ### Retrieve a dependency
@@ -77,10 +78,11 @@ You can create feature containers including the super container. Registrations o
 
 ```swift
 let appContainer = AppContainer()
-appContainer.register { StorageAImpl() as Storage }
+appContainer.register(Storage.self) { StorageAImpl() }
 
 let featureContainer = FeatureContainer(container: appContainer)
-let storageImplementation: Storage? = try? featureContainer.resolve(Storage.self)
+featureContainer.register(Storage.self) { StorageBImpl() }
+let storageImplementation: Storage? = try? featureContainer.resolve() // StorageBImpl() will be returned.
 ```
 
 ## Credits
