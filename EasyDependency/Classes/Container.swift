@@ -30,6 +30,7 @@ extension Container {
     }
     
     public func resolve<T>(_ interface: T.Type = T.self) throws -> T {
+        // Due to potential performance decrease, the `resolveList` function is not used.
         for object in registrations {
             if let registration = object as? Registration<T> {
                 return registration.resolve()
@@ -38,5 +39,17 @@ extension Container {
         
         guard let container = superContainer else { throw EasyDependencyError.implementationNotFound }
         return try container.resolve(interface)
+    }
+    
+    public func resolveList<T>(_ interface: T.Type = T.self) -> [T] {
+        var implementations: [T] = []
+        for object in registrations {
+            if let registration = object as? Registration<T> {
+                implementations.append(registration.resolve())
+            }
+        }
+        
+        let superContainerImplementations: [T] = superContainer?.resolveList() ?? []
+        return implementations + superContainerImplementations
     }
 }

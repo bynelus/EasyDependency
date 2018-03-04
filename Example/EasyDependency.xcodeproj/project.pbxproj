@@ -17,6 +17,7 @@
 		D405D5071FA667A600C382E6 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D5061FA667A600C382E6 /* Storage.swift */; };
 		D405D5091FA667F900C382E6 /* StorageAImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D5081FA667F900C382E6 /* StorageAImpl.swift */; };
 		D405D50B1FA66AC800C382E6 /* FeatureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */; };
+		D4156120204C61A60059F015 /* StorageBImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415611F204C61A60059F015 /* StorageBImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D405D5061FA667A600C382E6 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		D405D5081FA667F900C382E6 /* StorageAImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAImpl.swift; sourceTree = "<group>"; };
 		D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureContainer.swift; sourceTree = "<group>"; };
+		D415611F204C61A60059F015 /* StorageBImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageBImpl.swift; sourceTree = "<group>"; };
 		E371C0ADEF8EB5E8DE4AA561 /* Pods-EasyDependency_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyDependency_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyDependency_Example/Pods-EasyDependency_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EC784986338EFC6C0435D0D6 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 			children = (
 				D405D5061FA667A600C382E6 /* Storage.swift */,
 				D405D5081FA667F900C382E6 /* StorageAImpl.swift */,
+				D415611F204C61A60059F015 /* StorageBImpl.swift */,
 			);
 			name = Storage;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				D405D50B1FA66AC800C382E6 /* FeatureContainer.swift in Sources */,
 				D405D5041FA6673A00C382E6 /* AppContainer.swift in Sources */,
+				D4156120204C61A60059F015 /* StorageBImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

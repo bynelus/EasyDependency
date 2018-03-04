@@ -16,10 +16,14 @@ class ViewController: UIViewController {
         
         let appContainer = AppContainer()
         appContainer.register { StorageAImpl() as Storage }
+        appContainer.register { StorageBImpl() as Storage }
         
         let featureContainer = FeatureContainer(container: appContainer)
         let storageImplementation: Storage? = try? featureContainer.resolve(Storage.self)
+        let storageList: [Storage] = featureContainer.resolveList()
+        
         dump(storageImplementation)
+        dump(storageList)
     }
 }
 

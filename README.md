@@ -23,7 +23,7 @@ EasyDependency is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'EasyDependency'
+pod 'EasyDependency', '~> 1.0'
 ```
 
 ## Summary
@@ -34,6 +34,7 @@ There is no focus on adding support for circular dependencies or automatic injec
 ## Features
 
 - [x] Register & retrieve dependencies from a DI container.
+- [x] Resolve list of implementations.
 
 ## Usage
 
@@ -66,7 +67,8 @@ appContainer.register { StorageAImpl() as Storage }
 You can retrieve the implementation by resolve the dependency by its interface.
 
 ```swift
-let storageImplementation: Storage? = try? appContainer.resolve(Storage.self)
+let storageImplementation: Storage? = try? appContainer.resolve()
+let storageList: [Storage] = appContainer.resolveList()
 ```
 
 ### Feature containers
