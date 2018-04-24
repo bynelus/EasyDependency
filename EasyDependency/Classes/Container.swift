@@ -21,9 +21,9 @@ public protocol Container: AnyObject {
 
 extension Container {
     
-    public func register<T>(_ interface: T.Type, _ handler: @escaping () -> T) {
+    public func register<T>(_ interface: T.Type, _ handler: @escaping (Self) throws -> T) {
         let registration = Registration<T> { () -> T in
-            return handler()
+            return try handler(self)
         }
         
         registrations.append(registration)
@@ -32,8 +32,9 @@ extension Container {
     public func resolve<T>(_ interface: T.Type = T.self) throws -> T {
         // Due to potential performance decrease, the `resolveList` function is not used.
         for object in registrations {
-            if let registration = object as? Registration<T> {
-                return registration.resolve()
+            if let registration = object as? Registration<T>,
+                let instance = try? registration.resolve() {
+                return instance
             }
         }
         
@@ -44,8 +45,9 @@ extension Container {
     public func resolveList<T>(_ interface: T.Type = T.self) -> [T] {
         var implementations: [T] = []
         for object in registrations {
-            if let registration = object as? Registration<T> {
-                implementations.append(registration.resolve())
+            if let registration = object as? Registration<T>,
+                let instance = try? registration.resolve() {
+                implementations.append(instance)
             }
         }
         

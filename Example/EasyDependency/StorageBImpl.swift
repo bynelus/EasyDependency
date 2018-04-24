@@ -10,6 +10,12 @@ import Foundation
 
 class StorageBImpl: Storage {
     
+    let string: String
+    
+    init(string: String) {
+        self.string = string
+    }
+    
     func retrieve() {
         // Implementation ..
     }

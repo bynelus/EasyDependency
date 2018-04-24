@@ -59,8 +59,8 @@ This way you register an implementation on a protocol.
 
 ```swift
 let appContainer = AppContainer()
-appContainer.register(Storage.self) { StorageAImpl() }
-appContainer.register(Storage.self) { StorageBImpl() }
+appContainer.register(Storage.self) { _ in StorageAImpl() }
+appContainer.register(Storage.self) { _ in StorageBImpl() }
 ```
 
 ### Retrieve a dependency
@@ -78,10 +78,11 @@ You can create feature containers including the super container. Registrations o
 
 ```swift
 let appContainer = AppContainer()
-appContainer.register(Storage.self) { StorageAImpl() }
+appContainer.register(Storage.self) { _ in StorageAImpl() }
+appContainer.register(String.self) { _ in "StringExample" }
 
 let featureContainer = FeatureContainer(container: appContainer)
-featureContainer.register(Storage.self) { StorageBImpl() }
+featureContainer.register(Storage.self) { container in StorageBImpl(string: try container.resolve()) }
 let storageImplementation: Storage? = try? featureContainer.resolve() // StorageBImpl() will be returned.
 ```
 

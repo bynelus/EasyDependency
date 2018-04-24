@@ -15,10 +15,11 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         let appContainer = AppContainer()
-        appContainer.register(Storage.self) { StorageAImpl() }
+        appContainer.register(Storage.self) { _ in StorageAImpl() }
         
         let featureContainer = FeatureContainer(container: appContainer)
-        featureContainer.register(Storage.self) { StorageBImpl() }
+        featureContainer.register(String.self) { _ in "Test" }
+        featureContainer.register(Storage.self) { container in StorageBImpl(string: try container.resolve()) }
         
         let storageImplementation: Storage? = try? featureContainer.resolve()
         let storageList: [Storage] = featureContainer.resolveList()

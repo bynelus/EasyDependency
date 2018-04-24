@@ -9,13 +9,13 @@
 import Foundation
 
 struct Registration<Interface> {
-    private let implementation: () -> Interface
+    private let implementation: () throws -> Interface
     
-    init(implementation: @escaping () -> Interface) {
+    init(implementation: @escaping () throws -> Interface) {
         self.implementation = implementation
     }
     
-    func resolve() -> Interface {
-        return implementation()
+    func resolve() throws -> Interface {
+        return try implementation()
     }
 }
