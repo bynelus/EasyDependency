@@ -35,6 +35,7 @@ There is no focus on adding support for circular dependencies or automatic injec
 
 - [x] Register & retrieve dependencies from a DI container.
 - [x] Resolve list of implementations.
+- [x] Register dependencies as singletons.
 
 ## Usage
 
@@ -61,6 +62,7 @@ This way you register an implementation on a protocol.
 let appContainer = AppContainer()
 appContainer.register(Storage.self) { _ in StorageAImpl() }
 appContainer.register(Storage.self) { _ in StorageBImpl() }
+appContainer.register(Storage.self, .singleton) { _ in StorageBImpl() }
 ```
 
 ### Retrieve a dependency

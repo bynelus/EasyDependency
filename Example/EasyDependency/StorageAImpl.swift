@@ -10,6 +10,8 @@ import Foundation
 
 class StorageAImpl: Storage {
     
+    let random: Int = Int(arc4random_uniform(1000))
+    
     func retrieve() {
         // Implementation ..
     }

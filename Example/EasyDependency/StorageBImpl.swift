@@ -10,6 +10,7 @@ import Foundation
 
 class StorageBImpl: Storage {
     
+    let random: Int = Int(arc4random_uniform(1000))
     let string: String
     
     init(string: String) {

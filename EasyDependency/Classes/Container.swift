@@ -21,8 +21,8 @@ public protocol Container: AnyObject {
 
 extension Container {
     
-    public func register<T>(_ interface: T.Type, _ handler: @escaping (Self) throws -> T) {
-        let registration = Registration<T> { () -> T in
+    public func register<T>(_ interface: T.Type, _ type: RegistrationType = .none, _ handler: @escaping (Self) throws -> T) {
+        let registration = Registration<T>(type: type) { () -> T in
             return try handler(self)
         }
         

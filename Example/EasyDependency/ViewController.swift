@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         let featureContainer = FeatureContainer(container: appContainer)
         featureContainer.register(String.self) { _ in "Test" }
-        featureContainer.register(Storage.self) { container in StorageBImpl(string: try container.resolve()) }
+        featureContainer.register(Storage.self, .singleton) { container in StorageBImpl(string: try container.resolve()) }
         
         let storageImplementation: Storage? = try? featureContainer.resolve()
         let storageList: [Storage] = featureContainer.resolveList()
