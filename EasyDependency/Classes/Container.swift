@@ -32,9 +32,8 @@ extension Container {
     public func resolve<T>(_ interface: T.Type = T.self) throws -> T {
         // Due to potential performance decrease, the `resolveList` function is not used.
         for object in registrations {
-            if let registration = object as? Registration<T>,
-                let instance = try? registration.resolve() {
-                return instance
+            if let registration = object as? Registration<T> {
+                return try registration.resolve()
             }
         }
         
