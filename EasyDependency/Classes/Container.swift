@@ -8,8 +8,15 @@
 
 import Foundation
 
-public enum EasyDependencyError: Error {
-    case implementationNotFound
+public enum EasyDependencyError: LocalizedError {
+    case implementationNotFound(name: String)
+	
+	public var errorDescription: String? {
+		switch self {
+		case .implementationNotFound(let name):
+			return "EasyDependencyError - Implementation Not Found: \(name)"
+		}
+	}
 }
 
 public protocol Container: AnyObject {
@@ -37,7 +44,7 @@ extension Container {
             }
         }
         
-        guard let container = superContainer else { throw EasyDependencyError.implementationNotFound }
+		guard let container = superContainer else { throw EasyDependencyError.implementationNotFound(name: String(describing: T.self)) }
         return try container.resolve(interface)
     }
     
