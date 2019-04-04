@@ -12,6 +12,7 @@ import EasyDependency
 class FeatureContainer: Container {
     var superContainer: Container?
     var registrations: [Any] = []
+	var logging: Bool = true
     
     required init(container: Container? = nil) {
         self.superContainer = container

@@ -8,33 +8,41 @@
 
 import Foundation
 
-public enum RegistrationType {
-    case none
-    case singleton
-}
-
 class Registration<Interface> {
-    let type: RegistrationType
+	let isSingleton: Bool
     let implementation: () throws -> Interface
     var cachedInstance: Interface?
     
-    init(type: RegistrationType, implementation: @escaping () throws -> Interface) {
-        self.type = type
+    init(isSingleton: Bool, implementation: @escaping () throws -> Interface) {
+        self.isSingleton = isSingleton
         self.implementation = implementation
     }
+	
+	private func createImplementationInstance(logging: Bool) throws -> Interface {
+		guard logging else { return try implementation() }
+		
+		let start = CFAbsoluteTimeGetCurrent()
+		let instance = try implementation()
+		let diff = CFAbsoluteTimeGetCurrent() - start
+		print("----- EASYDEPENDENCY -----> \(String(describing: instance)) (Duration: \(diff) ms)")
+		return instance
+	}
+	
+	func prepareImplementation(logging: Bool) throws {
+		cachedInstance = try createImplementationInstance(logging: logging)
+	}
     
-    func resolve() throws -> Interface {
-        if let cachedInstance = cachedInstance {
-            return cachedInstance
-        }
-        
-        let instance = try implementation()
-        
-        // Cache the instance if it needs to be a singleton
-        if type == .singleton {
-            cachedInstance = instance
-        }
-        
-        return instance
+	func resolve(logging: Bool) throws -> Interface {
+        guard let cachedInstance = cachedInstance else {
+			let instance = try createImplementationInstance(logging: logging)
+			
+			if isSingleton {
+				self.cachedInstance = instance
+			}
+			
+			return instance
+		}
+		
+		return cachedInstance
     }
 }

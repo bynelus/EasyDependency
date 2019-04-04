@@ -47,6 +47,7 @@ import EasyDependency
 class AppContainer: Container {
     var superContainer: Container?
     var registrations: [Any] = []
+    var logging: Bool = false
 
     required init(container: Container? = nil) {
         self.superContainer = container
@@ -60,9 +61,9 @@ This way you register an implementation on a protocol.
 
 ```swift
 let appContainer = AppContainer()
-appContainer.register(Storage.self) { _ in StorageAImpl() }
-appContainer.register(Storage.self) { _ in StorageBImpl() }
-appContainer.register(Storage.self, .singleton) { _ in StorageBImpl() }
+try appContainer.register(Storage.self) { _ in StorageAImpl() }
+try appContainer.register(Storage.self) { _ in StorageBImpl() }
+try appContainer.register(Storage.self, .lazySingleton) { _ in StorageBImpl() }
 ```
 
 ### Retrieve a dependency
@@ -80,11 +81,11 @@ You can create feature containers including the super container. Registrations o
 
 ```swift
 let appContainer = AppContainer()
-appContainer.register(Storage.self) { _ in StorageAImpl() }
-appContainer.register(String.self) { _ in "StringExample" }
+try appContainer.register(Storage.self) { _ in StorageAImpl() }
+try appContainer.register(String.self) { _ in "StringExample" }
 
 let featureContainer = FeatureContainer(container: appContainer)
-featureContainer.register(Storage.self) { container in StorageBImpl(string: try container.resolve()) }
+try featureContainer.register(Storage.self) { container in StorageBImpl(string: try container.resolve()) }
 let storageImplementation: Storage? = try? featureContainer.resolve() // StorageBImpl() will be returned.
 ```
 

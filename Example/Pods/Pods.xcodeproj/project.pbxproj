@@ -16,6 +16,7 @@
 		CE8B56A8814C461D9469CC0B9207DFD8 /* Pods-EasyDependency_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2263F52C4590293D11E03AE781E66 /* Pods-EasyDependency_Tests-dummy.m */; };
 		D405D5001FA660C000C382E6 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D4FE1FA660C000C382E6 /* Registration.swift */; };
 		D405D5011FA660C000C382E6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D4FF1FA660C000C382E6 /* Container.swift */; };
+		D4DC9DC022560B9300B16F8A /* Container+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC9DBF22560B9300B16F8A /* Container+Extensions.swift */; };
 		E129FB65B8C5F99D96FE17F14BED735A /* Pods-EasyDependency_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F5A98361503011F1752BC8FFFCC9CC1 /* Pods-EasyDependency_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE776B2F4D3D034F2E5B1063558F3C88 /* EasyDependency-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82577D04D506EA011CEE986617538818 /* EasyDependency-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		C83CFAC22EB5B70A1F50AD09633F5AAC /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D405D4FE1FA660C000C382E6 /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = EasyDependency/Classes/Registration.swift; sourceTree = "<group>"; };
 		D405D4FF1FA660C000C382E6 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Container.swift; path = EasyDependency/Classes/Container.swift; sourceTree = "<group>"; };
+		D4DC9DBF22560B9300B16F8A /* Container+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Extensions.swift"; sourceTree = "<group>"; };
 		D542EB1BCE3B7546F4F918E9E2ABC2E1 /* Pods-EasyDependency_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D66916CECF4D3C80761299B3B0803437 /* Pods-EasyDependency_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyDependency_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DD2517280E29803BF4B163A236162CA0 /* Pods-EasyDependency_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyDependency_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				D405D4FF1FA660C000C382E6 /* Container.swift */,
+				D4DC9DBF22560B9300B16F8A /* Container+Extensions.swift */,
 				D405D4FE1FA660C000C382E6 /* Registration.swift */,
 				EF5C3AFC59DCCC1E073445924D212B5F /* Support Files */,
 			);
@@ -332,6 +335,7 @@
 				2313F27FB2BB9441021295AE7F3BDE43 /* EasyDependency-dummy.m in Sources */,
 				D405D5011FA660C000C382E6 /* Container.swift in Sources */,
 				D405D5001FA660C000C382E6 /* Registration.swift in Sources */,
+				D4DC9DC022560B9300B16F8A /* Container+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
