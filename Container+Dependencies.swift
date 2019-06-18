@@ -1,5 +1,5 @@
 //
-//  Container+Extensions.swift
+//  Container+Dependencies.swift
 //  EasyDependency
 //
 //  Created by Niels Koole on 04/04/2019.

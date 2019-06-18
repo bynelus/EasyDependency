@@ -8,17 +8,17 @@
 
 import Foundation
 
-class Registration<Interface> {
+class Registration<T> {
 	let isSingleton: Bool
-    let implementation: () throws -> Interface
-    var cachedInstance: Interface?
+    let implementation: () throws -> T
+    var cachedInstance: T?
     
-    init(isSingleton: Bool, implementation: @escaping () throws -> Interface) {
+    init(isSingleton: Bool, implementation: @escaping () throws -> T) {
         self.isSingleton = isSingleton
         self.implementation = implementation
     }
 	
-	private func createImplementationInstance(logging: Bool) throws -> Interface {
+	private func createImplementationInstance(logging: Bool) throws -> T {
 		guard logging else { return try implementation() }
 		
 		let start = CFAbsoluteTimeGetCurrent()
@@ -32,7 +32,7 @@ class Registration<Interface> {
 		cachedInstance = try createImplementationInstance(logging: logging)
 	}
     
-	func resolve(logging: Bool) throws -> Interface {
+	func resolve(logging: Bool) throws -> T {
         guard let cachedInstance = cachedInstance else {
 			let instance = try createImplementationInstance(logging: logging)
 			

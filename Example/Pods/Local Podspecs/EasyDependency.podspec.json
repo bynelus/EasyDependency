@@ -1,22 +1,28 @@
 {
   "name": "EasyDependency",
-  "version": "0.1.0",
-  "summary": "A short description of EasyDependency.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/NielsKoole/EasyDependency",
+  "version": "2.0.0",
+  "summary": "EasyDependency is a very lightweight dependency injection framework, without magic.",
+  "description": "EasyDependency is a very lightweight dependency injection framework, without magic. Just a container to register and resolve dependencies.\nThere is no focus on adding support for circular dependencies or automatic injection of dependencies. Simplicity is key.",
+  "homepage": "https://github.com/bynelus/EasyDependency",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "NielsKoole": "niels@made2pay.com"
+    "NielsKoole": "nielskoole@icloud.com"
   },
   "source": {
-    "git": "https://github.com/NielsKoole/EasyDependency.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/bynelus/EasyDependency.git",
+    "tag": "2.0.0"
   },
+  "social_media_url": "https://twitter.com/NielsKoole",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "EasyDependency/Classes/**/*"
+  "source_files": "EasyDependency/Classes/**/*",
+  "dependencies": {
+    "Schedule": [
+
+    ]
+  }
 }

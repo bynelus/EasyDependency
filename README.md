@@ -23,7 +23,7 @@ EasyDependency is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'EasyDependency', '~> 1.0'
+pod 'EasyDependency', '~> 2.0'
 ```
 
 ## Summary
@@ -36,6 +36,7 @@ There is no focus on adding support for circular dependencies or automatic injec
 - [x] Register & retrieve dependencies from a DI container.
 - [x] Resolve list of implementations.
 - [x] Register dependencies as singletons.
+- [x] Schedule jobs based on a dependency.
 
 ## Usage
 
@@ -89,9 +90,24 @@ try featureContainer.register(Storage.self) { container in StorageBImpl(string: 
 let storageImplementation: Storage? = try? featureContainer.resolve() // StorageBImpl() will be returned.
 ```
 
+### Schedule jobs
+
+You can also schedule a job based on a certain interval. This works together with [Schedule](http://https://github.com/luoxiu/Schedule), so a very elegant way of scheduling tasks based on a certain dependency.
+
+```swift
+let appContainer = AppContainer()
+try appContainer.register(String.self) { _ in "StringExample" }
+
+appContainer.schedule(type: String.self, in: 5.seconds, repeating: 5.minutes, queue: .global()) { textValue in
+	guard let textValue = textValue else { return }
+	print("Execute on our string: \(textValue)") // Will be printed after 5 seconds and every 5 minutes after.
+}
+```
+
 ## Credits
 
 This concept is created together with Jelle Heemskerk ([Github](https://github.com/jelleheemskerk)).
+Also credits to Quentin Jin for creating [Schedule](http://https://github.com/luoxiu/Schedule), a very elegant and intuïtive way of scheduling jobs.
 
 ## Author
 

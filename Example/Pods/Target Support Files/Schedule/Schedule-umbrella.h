@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_EasyDependency_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_EasyDependency_TestsVersionString[];
+FOUNDATION_EXPORT double ScheduleVersionNumber;
+FOUNDATION_EXPORT const unsigned char ScheduleVersionString[];
 
