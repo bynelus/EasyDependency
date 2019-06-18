@@ -18,7 +18,7 @@ There is no focus on adding support for circular dependencies or automatic injec
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'NielsKoole' => 'nielskoole@icloud.com' }
   s.source           = { :git => 'https://github.com/bynelus/EasyDependency.git', :tag => s.version.to_s }
-  s.swift_version 	 = '4.0'
+  s.swift_version 	 = '5.0'
   s.social_media_url = 'https://twitter.com/NielsKoole'
   s.source_files 	 = 'EasyDependency/Classes/**/*'
   s.ios.deployment_target = '8.0'
