@@ -1,24 +1,16 @@
 PODS:
-  - EasyDependency (2.0.0):
-    - Schedule
-  - Schedule (1.0.0)
+  - EasyDependency (2.1.4)
 
 DEPENDENCIES:
   - EasyDependency (from `../`)
-  - Schedule
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Schedule
 
 EXTERNAL SOURCES:
   EasyDependency:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EasyDependency: 12b2f4a5218a0a380dc6af44c760342b6326069b
-  Schedule: 64f334e01daa6f80201ab147b59cb4f1e118ae74
+  EasyDependency: 82081393166286025d5be7295171b17cd0138381
 
-PODFILE CHECKSUM: 6d7c7496842a7cea9b9e45d58643ff28eef77295
+PODFILE CHECKSUM: eb4bba3f5a33765df31939c539205e5d58867640
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.7.2

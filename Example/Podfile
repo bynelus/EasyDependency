@@ -3,5 +3,4 @@ platform :ios, '8.0'
 
 target 'EasyDependency_Example' do
   pod 'EasyDependency', :path => '../'
-  pod 'Schedule'
 end

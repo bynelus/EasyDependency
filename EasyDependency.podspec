@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyDependency'
-  s.version          = '2.1.3'
+  s.version          = '2.1.4'
   s.summary          = 'EasyDependency is a very lightweight dependency injection framework, without magic.'
   s.description      = <<-DESC
 EasyDependency is a very lightweight dependency injection framework, without magic. Just a container to register and resolve dependencies.
@@ -21,7 +21,6 @@ There is no focus on adding support for circular dependencies or automatic injec
   s.swift_version 	 = '5.0'
   s.social_media_url = 'https://twitter.com/NielsKoole'
   s.source_files 	 = 'EasyDependency/Classes/**/*'
-  s.ios.deployment_target = '9.0'
-  s.dependency 'Schedule'
+  s.ios.deployment_target = '8.0'
 
 end

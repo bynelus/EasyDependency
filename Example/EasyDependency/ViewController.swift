@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Schedule
 
 class ViewController: UIViewController {
 
@@ -21,12 +22,6 @@ class ViewController: UIViewController {
 			try appContainer.register(Storage.self) { _ in StorageAImpl() }
 			try featureContainer.register(String.self) { _ in "Test je mofo" }
 			try featureContainer.register(Storage.self, .singleton(scheduler: .background)) { container in StorageBImpl(string: try container.resolve()) }
-			
-			featureContainer.schedule(type: String.self, in: 10.seconds, repeating: 1.minute, queue: .main) { [weak self] title in
-				let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
-				alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-				self?.present(alert, animated: true, completion: nil)
-			}
 		} catch let e {
 			dump(e.localizedDescription)
 		}
