@@ -7,9 +7,8 @@
 
 import Foundation
 
-extension Container {
-	
-	public func register<T>(_ interface: T.Type, _ type: RegistrationType = .lazyInstance, _ handler: @escaping (Self) throws -> T) throws {
+public extension Container {
+	func register<T>(_ interface: T.Type, _ type: RegistrationType = .lazyInstance, _ handler: @escaping (Self) throws -> T) throws {
 		let registration = Registration<T>(isSingleton: type.isSingleton) { try handler(self) }
 		registrations.append(registration)
 		
@@ -31,7 +30,7 @@ extension Container {
 		}
 	}
 	
-	public func resolve<T>(_ interface: T.Type = T.self) throws -> T {
+	func resolve<T>(_ interface: T.Type = T.self) throws -> T {
 		// Due to potential performance decrease, the `resolveList` function is not used.
 		for object in registrations {
 			if let registration = object as? Registration<T> {
@@ -43,7 +42,7 @@ extension Container {
 		return try container.resolve(interface)
 	}
 	
-	public func resolveList<T>(_ interface: T.Type = T.self) -> [T] {
+	func resolveList<T>(_ interface: T.Type = T.self) -> [T] {
 		var implementations: [T] = []
 		for object in registrations {
 			if let registration = object as? Registration<T>,

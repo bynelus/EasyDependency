@@ -8,15 +8,18 @@
 import Foundation
 import Schedule
 
-extension Container {
-	public func schedule(in interval: Interval, repeating: Interval? = nil, queue: DispatchQueue, handler: @escaping () -> Void) {
-		let plan = repeating != nil ? Plan.after(interval, repeating: repeating!) : Plan.after(interval)
-		plan.do(queue: queue) { handler() }
+public extension Container {
+	private func plan(for interval: Interval, repeating: Interval?) -> Plan {
+		guard let repeating = repeating else { return Plan.after(interval) }
+		return Plan.after(interval, repeating: repeating)
 	}
 	
-	public func schedule<T>(type: T.Type, in interval: Interval, repeating: Interval? = nil, queue: DispatchQueue, handler: @escaping (T?) -> Void) {
-		let plan = repeating != nil ? Plan.after(interval, repeating: repeating!) : Plan.after(interval)
-		plan.do(queue: queue) { [weak self] in
+	func schedule(in interval: Interval, repeating: Interval? = nil, queue: DispatchQueue, handler: @escaping () -> Void) {
+		plan(for: interval, repeating: repeating).do(queue: queue) { handler() }
+	}
+	
+	func schedule<T>(type: T.Type, in interval: Interval, repeating: Interval? = nil, queue: DispatchQueue, handler: @escaping (T?) -> Void) {
+		plan(for: interval, repeating: repeating).do(queue: queue) { [weak self] in
 			guard let strongSelf = self else { return handler(nil) }
 			handler(try? strongSelf.resolve(type))
 		}
