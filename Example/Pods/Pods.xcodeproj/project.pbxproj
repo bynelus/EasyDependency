@@ -28,8 +28,8 @@
 		C52F21F7DFD73DA46BC783E2D39F46BF /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F62C836EA619E0C8273964AF8205F /* Calendar.swift */; };
 		C7AA25FC3E235FECD47266874A3E8A1A /* RunLoopTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333A58483535A37B319709301CF25D9 /* RunLoopTask.swift */; };
 		CBD97FFFCF72565A38E120454F6562E4 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3588737D1DCB4F09EE5B0125E5145AD3 /* Lock.swift */; };
-		D457EAD722B91F6F00845186 /* Container+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457EAD522B91F6F00845186 /* Container+Dependencies.swift */; };
-		D457EAD822B91F6F00845186 /* Container+SchedulingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457EAD622B91F6F00845186 /* Container+SchedulingTasks.swift */; };
+		D41CD2A622BA25E200FC6819 /* Container+SchedulingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41CD2A422BA25E200FC6819 /* Container+SchedulingTasks.swift */; };
+		D41CD2A722BA25E200FC6819 /* Container+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41CD2A522BA25E200FC6819 /* Container+Dependencies.swift */; };
 		DEFF2D8DC82DC8D1A16BA351CA5B238F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40685D39968BF15AB294F6FF5814F0F7 /* Foundation.framework */; };
 		DF4F143B1A371452E822B63641E46803 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40685D39968BF15AB294F6FF5814F0F7 /* Foundation.framework */; };
 		E04F1AD9FD173DC5441F8CF925BEB734 /* EasyDependency-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C416BC9D3B42524BC2FDC35A9913B /* EasyDependency-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -105,8 +105,8 @@
 		BB0D64497FA4E8EC3954F1EFB5D723DF /* Weekday.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Weekday.swift; path = Sources/Schedule/Weekday.swift; sourceTree = "<group>"; };
 		BC643AD76B5C5F771E9EEDA4BBEB2AD9 /* Schedule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Schedule-Info.plist"; sourceTree = "<group>"; };
 		CD577108E8E89C33B967E8FAE9B64378 /* Bucket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bucket.swift; path = Sources/Schedule/Bucket.swift; sourceTree = "<group>"; };
-		D457EAD522B91F6F00845186 /* Container+Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Container+Dependencies.swift"; sourceTree = "<group>"; };
-		D457EAD622B91F6F00845186 /* Container+SchedulingTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Container+SchedulingTasks.swift"; sourceTree = "<group>"; };
+		D41CD2A422BA25E200FC6819 /* Container+SchedulingTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Container+SchedulingTasks.swift"; path = "EasyDependency/Classes/Container+SchedulingTasks.swift"; sourceTree = "<group>"; };
+		D41CD2A522BA25E200FC6819 /* Container+Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Container+Dependencies.swift"; path = "EasyDependency/Classes/Container+Dependencies.swift"; sourceTree = "<group>"; };
 		DE745B43270FACCA08C88BAC277B0BD2 /* EasyDependency-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-prefix.pch"; sourceTree = "<group>"; };
 		DFA81C756F531C8D9CB3361135F7D995 /* Pods-EasyDependency_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E60FCC5AF6EF9C4B79C73E75A165ECC3 /* Atomic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Atomic.swift; path = Sources/Schedule/Atomic.swift; sourceTree = "<group>"; };
@@ -277,8 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				75C85CBBBD189C8144C217DA1F434E79 /* Container.swift */,
-				D457EAD522B91F6F00845186 /* Container+Dependencies.swift */,
-				D457EAD622B91F6F00845186 /* Container+SchedulingTasks.swift */,
+				D41CD2A522BA25E200FC6819 /* Container+Dependencies.swift */,
+				D41CD2A422BA25E200FC6819 /* Container+SchedulingTasks.swift */,
 				13A542C7C923F4C326E5AF3E1693B52A /* Registration.swift */,
 				89AD1FCD143A07836A4E708D6A490A45 /* Pod */,
 				13F8ECD866BCB09B73D630CB7304D567 /* Support Files */,
@@ -450,9 +450,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D457EAD722B91F6F00845186 /* Container+Dependencies.swift in Sources */,
+				D41CD2A722BA25E200FC6819 /* Container+Dependencies.swift in Sources */,
+				D41CD2A622BA25E200FC6819 /* Container+SchedulingTasks.swift in Sources */,
 				3C4527F3D4F274A164DA3DE0F52EBFBA /* Container.swift in Sources */,
-				D457EAD822B91F6F00845186 /* Container+SchedulingTasks.swift in Sources */,
 				01BDD61888939BE17F9E223127CF9087 /* EasyDependency-dummy.m in Sources */,
 				EA89BBD295F1258020C6286B2A764054 /* Registration.swift in Sources */,
 			);
