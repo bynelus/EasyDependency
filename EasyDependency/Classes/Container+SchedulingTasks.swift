@@ -15,11 +15,11 @@ public extension Container {
 	}
 	
 	func schedule(in interval: Interval, repeating: Interval? = nil, queue: DispatchQueue, handler: @escaping () -> Void) {
-		plan(for: interval, repeating: repeating).do(queue: queue) { handler() }
+		_ = plan(for: interval, repeating: repeating).do(queue: queue) { handler() }
 	}
 	
 	func schedule<T>(type: T.Type, in interval: Interval, repeating: Interval? = nil, queue: DispatchQueue, handler: @escaping (T?) -> Void) {
-		plan(for: interval, repeating: repeating).do(queue: queue) { [weak self] in
+		_ = plan(for: interval, repeating: repeating).do(queue: queue) { [weak self] in
 			guard let strongSelf = self else { return handler(nil) }
 			handler(try? strongSelf.resolve(type))
 		}
