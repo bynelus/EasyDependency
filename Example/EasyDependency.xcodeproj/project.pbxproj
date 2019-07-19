@@ -18,6 +18,7 @@
 		D405D5091FA667F900C382E6 /* StorageAImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D5081FA667F900C382E6 /* StorageAImpl.swift */; };
 		D405D50B1FA66AC800C382E6 /* FeatureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */; };
 		D4156120204C61A60059F015 /* StorageBImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415611F204C61A60059F015 /* StorageBImpl.swift */; };
+		D45860E322E1F545009C2B75 /* StorageCImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E222E1F545009C2B75 /* StorageCImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D405D5081FA667F900C382E6 /* StorageAImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAImpl.swift; sourceTree = "<group>"; };
 		D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureContainer.swift; sourceTree = "<group>"; };
 		D415611F204C61A60059F015 /* StorageBImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageBImpl.swift; sourceTree = "<group>"; };
+		D45860E222E1F545009C2B75 /* StorageCImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCImpl.swift; sourceTree = "<group>"; };
 		E371C0ADEF8EB5E8DE4AA561 /* Pods-EasyDependency_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyDependency_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyDependency_Example/Pods-EasyDependency_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EC784986338EFC6C0435D0D6 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,8 +80,7 @@
 		607FACD21AFB9204008FA782 /* Example for EasyDependency */ = {
 			isa = PBXGroup;
 			children = (
-				D405D5051FA6678A00C382E6 /* Storage */,
-				D405D5021FA6672800C382E6 /* Configuration */,
+				D45860E022E1F51F009C2B75 /* Examples */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -116,6 +117,7 @@
 				D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */,
 			);
 			name = Configuration;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D405D5051FA6678A00C382E6 /* Storage */ = {
@@ -124,8 +126,19 @@
 				D405D5061FA667A600C382E6 /* Storage.swift */,
 				D405D5081FA667F900C382E6 /* StorageAImpl.swift */,
 				D415611F204C61A60059F015 /* StorageBImpl.swift */,
+				D45860E222E1F545009C2B75 /* StorageCImpl.swift */,
 			);
 			name = Storage;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D45860E022E1F51F009C2B75 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				D405D5021FA6672800C382E6 /* Configuration */,
+				D405D5051FA6678A00C382E6 /* Storage */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		EC5850E540AAE53297A2D7B3 /* Pods */ = {
@@ -269,6 +282,7 @@
 				D405D50B1FA66AC800C382E6 /* FeatureContainer.swift in Sources */,
 				D405D5041FA6673A00C382E6 /* AppContainer.swift in Sources */,
 				D4156120204C61A60059F015 /* StorageBImpl.swift in Sources */,
+				D45860E322E1F545009C2B75 /* StorageCImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

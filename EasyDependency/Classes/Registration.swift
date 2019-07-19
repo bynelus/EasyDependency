@@ -9,12 +9,12 @@
 import Foundation
 
 class Registration<T> {
-	let isSingleton: Bool
+	let type: RegistrationType
     let implementation: () throws -> T
     var cachedInstance: T?
     
-    init(isSingleton: Bool, implementation: @escaping () throws -> T) {
-        self.isSingleton = isSingleton
+    init(type: RegistrationType, implementation: @escaping () throws -> T) {
+        self.type = type
         self.implementation = implementation
     }
 	
@@ -36,7 +36,7 @@ class Registration<T> {
         guard let cachedInstance = cachedInstance else {
 			let instance = try createImplementationInstance(logging: logging)
 			
-			if isSingleton {
+			if type.isSingleton {
 				self.cachedInstance = instance
 			}
 			

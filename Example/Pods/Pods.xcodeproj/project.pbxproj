@@ -14,8 +14,11 @@
 		58098E07E36FF28B04B0196E86F448BA /* Pods-EasyDependency_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 727E955F1DF935291C36F3805EF909C4 /* Pods-EasyDependency_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C2C7B5B32DEB8FFA38A21A9624F4793 /* Pods-EasyDependency_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EFFB741B1AA8C19D17455CE0A8997B /* Pods-EasyDependency_Example-dummy.m */; };
 		5DA19B66B1897A678E2DE17F5F95ABFF /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EDA2B8A6EB7D55D3ED0D1F95734E8 /* Container.swift */; };
-		888899C3986BC742C526F09338D03CC4 /* Container+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC53821C6D9E6FF94F61D10599203A /* Container+Dependencies.swift */; };
 		C79D502EE0FAFFBE0E035F861BE9B293 /* EasyDependency-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F87CDD6B781F843878EC12F1D7649A /* EasyDependency-dummy.m */; };
+		D45860E822E20591009C2B75 /* PreparationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E422E20591009C2B75 /* PreparationContainer.swift */; };
+		D45860E922E20591009C2B75 /* Container+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E522E20591009C2B75 /* Container+Extensions.swift */; };
+		D45860EA22E20591009C2B75 /* RegistrationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E622E20591009C2B75 /* RegistrationType.swift */; };
+		D45860EB22E20591009C2B75 /* EasyDependencyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E722E20591009C2B75 /* EasyDependencyError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,31 +32,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00CC939742D62216AD6A3EEF7E55C1D8 /* EasyDependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyDependency.framework; path = EasyDependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CC939742D62216AD6A3EEF7E55C1D8 /* EasyDependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyDependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F414259875D8895FE211868D9F1D2A /* EasyDependency-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-umbrella.h"; sourceTree = "<group>"; };
 		122FBFFC2CABA8B517719A58B241E7D9 /* EasyDependency-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-prefix.pch"; sourceTree = "<group>"; };
-		22EC53821C6D9E6FF94F61D10599203A /* Container+Dependencies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Container+Dependencies.swift"; path = "EasyDependency/Classes/Container+Dependencies.swift"; sourceTree = "<group>"; };
 		2D0116E0D026DCD82BD51659E24AE047 /* Pods-EasyDependency_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EasyDependency_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		406EDA2B8A6EB7D55D3ED0D1F95734E8 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.swift; path = EasyDependency/Classes/Container.swift; sourceTree = "<group>"; };
 		42F74C3DC3518472672AFDCDF5B165F3 /* Pods-EasyDependency_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyDependency_Example.modulemap"; sourceTree = "<group>"; };
-		451C0979F30EA8C3B2964649AB9409C7 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyDependency_Example.framework; path = "Pods-EasyDependency_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8DC0714BDA28EE1F2D8634DB7C1777 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		451C0979F30EA8C3B2964649AB9409C7 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F8DC0714BDA28EE1F2D8634DB7C1777 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		63F87CDD6B781F843878EC12F1D7649A /* EasyDependency-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyDependency-dummy.m"; sourceTree = "<group>"; };
 		67EFFB741B1AA8C19D17455CE0A8997B /* Pods-EasyDependency_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyDependency_Example-dummy.m"; sourceTree = "<group>"; };
 		6C23F5A179BE539713AEC963A1DAEA92 /* Pods-EasyDependency_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyDependency_Example-Info.plist"; sourceTree = "<group>"; };
 		727E955F1DF935291C36F3805EF909C4 /* Pods-EasyDependency_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyDependency_Example-umbrella.h"; sourceTree = "<group>"; };
-		7DAA2A4135FE4EB201544D42FED8DEDF /* EasyDependency.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EasyDependency.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7DAA2A4135FE4EB201544D42FED8DEDF /* EasyDependency.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EasyDependency.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A9E983A42C07B1FF2F67507C6CFA424 /* Pods-EasyDependency_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyDependency_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A178B9C518EFEB9ACCD8F6D6D69659C1 /* EasyDependency.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyDependency.xcconfig; sourceTree = "<group>"; };
 		C362C47028DF79A0B4F85423E2E4B006 /* EasyDependency-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasyDependency-Info.plist"; sourceTree = "<group>"; };
 		CC0B8692AF05DE91E4F4117AC7C0557F /* EasyDependency.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyDependency.modulemap; sourceTree = "<group>"; };
+		D45860E422E20591009C2B75 /* PreparationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationContainer.swift; path = EasyDependency/Classes/PreparationContainer.swift; sourceTree = "<group>"; };
+		D45860E522E20591009C2B75 /* Container+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Container+Extensions.swift"; path = "EasyDependency/Classes/Container+Extensions.swift"; sourceTree = "<group>"; };
+		D45860E622E20591009C2B75 /* RegistrationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationType.swift; path = EasyDependency/Classes/RegistrationType.swift; sourceTree = "<group>"; };
+		D45860E722E20591009C2B75 /* EasyDependencyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EasyDependencyError.swift; path = EasyDependency/Classes/EasyDependencyError.swift; sourceTree = "<group>"; };
 		DFA81C756F531C8D9CB3361135F7D995 /* Pods-EasyDependency_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B9E40333FF96E2B0BEC6C1349B0D64 /* Registration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = EasyDependency/Classes/Registration.swift; sourceTree = "<group>"; };
 		E81DDA3F46A727375FE33021B1DF153E /* Pods-EasyDependency_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E9A717F5CC6769CAEBDBBC6F12C40217 /* Pods-EasyDependency_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyDependency_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F109B56F64549D35B59CA43EC10D06F0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F109B56F64549D35B59CA43EC10D06F0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				406EDA2B8A6EB7D55D3ED0D1F95734E8 /* Container.swift */,
-				22EC53821C6D9E6FF94F61D10599203A /* Container+Dependencies.swift */,
 				E0B9E40333FF96E2B0BEC6C1349B0D64 /* Registration.swift */,
+				D45860E522E20591009C2B75 /* Container+Extensions.swift */,
+				D45860E722E20591009C2B75 /* EasyDependencyError.swift */,
+				D45860E422E20591009C2B75 /* PreparationContainer.swift */,
+				D45860E622E20591009C2B75 /* RegistrationType.swift */,
 				43B232263C93CE5446F8F22FF1E35BB5 /* Pod */,
 				31D56866F4593195AB33B3DAD3A24ABE /* Support Files */,
 			);
@@ -298,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888899C3986BC742C526F09338D03CC4 /* Container+Dependencies.swift in Sources */,
 				5DA19B66B1897A678E2DE17F5F95ABFF /* Container.swift in Sources */,
+				D45860E822E20591009C2B75 /* PreparationContainer.swift in Sources */,
+				D45860EA22E20591009C2B75 /* RegistrationType.swift in Sources */,
 				C79D502EE0FAFFBE0E035F861BE9B293 /* EasyDependency-dummy.m in Sources */,
+				D45860E922E20591009C2B75 /* Container+Extensions.swift in Sources */,
+				D45860EB22E20591009C2B75 /* EasyDependencyError.swift in Sources */,
 				29B8F7ACE1069C6D5979BDA2DA877C8C /* Registration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,8 +445,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

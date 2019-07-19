@@ -10,11 +10,11 @@ import Foundation
 import EasyDependency
 
 class FeatureContainer: Container {
-    var superContainer: Container?
-    var registrations: [Any] = []
+	var superContainer: Container?
+	var registrations: [Any] = []
 	var logging: Bool = true
-    
-    required init(container: Container? = nil) {
-        self.superContainer = container
-    }
+	
+	required init(container: Container?) {
+		self.superContainer = container
+	}
 }
