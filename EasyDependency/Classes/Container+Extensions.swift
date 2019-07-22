@@ -28,15 +28,15 @@ public extension Container {
 		}
 	}
 	
-	func build(_ prepare: (PreparationContainer) throws -> Void, waitUntilFinished: Bool, completion: @escaping (Container) -> Void) throws {
+	func build(_ prepare: (PreparationContainer) throws -> Void, waitUntilFinished: Bool, completion: @escaping (Container) throws -> Void) throws {
 		let prepContainer = PreparationContainer(container: self)
 		try prepare(prepContainer)
 		
 		/// After all dependencies are registered, we're going to initiate the ones that are non-lazy.
 		if waitUntilFinished {
-			try prepContainer.prepareDependenciesWhileWaiting(logging: logging) { completion(self) }
+			try prepContainer.prepareDependenciesWhileWaiting(logging: logging) { try completion(self) }
 		} else {
-			try prepContainer.prepareDependenciesNotWaiting(logging: logging) { completion(self) }
+			try prepContainer.prepareDependenciesNotWaiting(logging: logging) { try completion(self) }
 		}
 	}
 }

@@ -49,6 +49,9 @@ class ViewController: UIViewController {
 			}, waitUntilFinished: true, completion: { container in
 				print("Completed")
 				
+				let string: String = try container.resolve()
+				print(string)
+				
 				let stringList: [String] = container.resolveList()
 				print(stringList)
 				

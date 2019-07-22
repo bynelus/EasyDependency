@@ -17,7 +17,7 @@ public class PreparationContainer {
 		self.container = container
 	}
 	
-	func prepareDependenciesWhileWaiting(logging: Bool, completion: @escaping () -> Void) throws {
+	func prepareDependenciesWhileWaiting(logging: Bool, completion: @escaping () throws -> Void) throws {
 		let group = DispatchGroup()
 		
 		try prepareImplementations.forEach { impl in
@@ -25,12 +25,24 @@ public class PreparationContainer {
 			try impl(logging) { group.leave() }
 		}
 		
-		group.notify(queue: .main, execute: { completion() })
+		group.notify(queue: .main, execute: {
+			do {
+				try completion()
+			} catch let e {
+				assertionFailure(e.localizedDescription)
+			}
+		})
 	}
 	
-	func prepareDependenciesNotWaiting(logging: Bool, completion: @escaping () -> Void) throws {
+	func prepareDependenciesNotWaiting(logging: Bool, completion: @escaping () throws -> Void) throws {
 		try prepareImplementations.forEach { try $0(logging) { } }
-		DispatchQueue.main.async { completion() }
+		DispatchQueue.main.async {
+			do {
+				try completion()
+			} catch let e {
+				assertionFailure(e.localizedDescription)
+			}
+		}
 	}
 	
 	public func register<T>(_ interface: T.Type, _ type: RegistrationType = .lazyInstance, _ handler: @escaping (Container) throws -> T) throws {
