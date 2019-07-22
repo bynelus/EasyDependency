@@ -33,8 +33,8 @@ public class PreparationContainer {
 		DispatchQueue.main.async { completion() }
 	}
 	
-	public func register<T>(_ interface: T.Type, _ type: RegistrationType = .lazyInstance, _ handler: @escaping (PreparationContainer) throws -> T) throws {
-		let registration = Registration<T>(type: type) { try handler(self) }
+	public func register<T>(_ interface: T.Type, _ type: RegistrationType = .lazyInstance, _ handler: @escaping (Container) throws -> T) throws {
+		let registration = Registration<T>(type: type) { try handler(self.container) }
 		container.registrations.append(registration)
 		
 		switch type {

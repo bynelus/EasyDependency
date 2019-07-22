@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 			try appContainer.build({ container in
 				try container.register(String.self) { _ in "Test je mofo 2 - FANTASTICS" }
 				try container.register(String.self, .singleton) { _ in "Deze is op de background geinitieerd.." }
-				try container.register(Storage.self, .singleton) { _ in StorageCImpl(string: "test") }
+				try container.register(Storage.self, .singleton) { c in StorageCImpl(string: try c.resolve(String.self)) }
 				try container.register(String.self) { _ in "Test je mofo 3 - FANTASTICS MAGIC" }
 			}, waitUntilFinished: true, completion: { container in
 				print("Completed")
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
 				print(stringList)
 				
 				let storageList: [Storage] = container.resolveList()
-				print(storageList)
+				_ = dump(storageList)
 			})
 		} catch let e {
 			dump(e.localizedDescription)
