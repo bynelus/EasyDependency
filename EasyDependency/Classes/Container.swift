@@ -14,4 +14,6 @@ public protocol Container: AnyObject {
 	var logging: Bool { get set }
 	
     init(container: Container?)
+	
+	func runBackgroundTasks() throws
 }

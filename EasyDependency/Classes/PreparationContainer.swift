@@ -25,8 +25,9 @@ public class PreparationContainer {
 			try impl(logging) { group.leave() }
 		}
 		
-		group.notify(queue: .main, execute: {
+		group.notify(queue: .main, execute: { [weak container] in
 			do {
+				try container?.runBackgroundTasks()
 				try completion()
 			} catch let e {
 				assertionFailure(e.localizedDescription)
@@ -36,8 +37,9 @@ public class PreparationContainer {
 	
 	func prepareDependenciesNotWaiting(logging: Bool, completion: @escaping () throws -> Void) throws {
 		try prepareImplementations.forEach { try $0(logging) { } }
-		DispatchQueue.main.async {
+		DispatchQueue.main.async { [weak container] in
 			do {
+				try container?.runBackgroundTasks()
 				try completion()
 			} catch let e {
 				assertionFailure(e.localizedDescription)

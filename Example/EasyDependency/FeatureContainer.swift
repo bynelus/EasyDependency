@@ -17,4 +17,8 @@ class FeatureContainer: Container {
 	required init(container: Container?) {
 		self.superContainer = container
 	}
+	
+	func runBackgroundTasks() throws {
+		print("START BACKGROUND TASKS")
+	}
 }
