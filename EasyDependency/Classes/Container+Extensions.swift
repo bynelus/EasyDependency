@@ -18,7 +18,7 @@ public extension Container {
 		case .lazyInstance: break
 		case .lazySingleton: break
 		case .singleton:
-			DispatchQueue(label: "Prepare implementation", qos: .userInitiated).async { [weak self] in
+			DispatchQueue(label: "Load impl. for \(T.self).self", qos: .userInitiated).async { [weak self] in
 				do {
 					try registration.prepareImplementation(logging: self?.logging ?? false)
 				} catch let e {

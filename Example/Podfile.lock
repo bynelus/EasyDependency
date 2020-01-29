@@ -1,5 +1,5 @@
 PODS:
-  - EasyDependency (2.1.4)
+  - EasyDependency (2.3.0)
 
 DEPENDENCIES:
   - EasyDependency (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EasyDependency: 82081393166286025d5be7295171b17cd0138381
+  EasyDependency: 19a376610b43c474db0e019b865bc908a953bafd
 
 PODFILE CHECKSUM: eb4bba3f5a33765df31939c539205e5d58867640
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.4

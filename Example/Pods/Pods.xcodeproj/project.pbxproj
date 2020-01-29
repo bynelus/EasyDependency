@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29B8F7ACE1069C6D5979BDA2DA877C8C /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9E40333FF96E2B0BEC6C1349B0D64 /* Registration.swift */; };
-		4805B893CFAA05F081F85681F7FBA71B /* EasyDependency-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F414259875D8895FE211868D9F1D2A /* EasyDependency-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		022A2A85D6D19351F31FB01364F25571 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA969D3FEC2CCA6986A4274D2AD52AC5 /* Registration.swift */; };
+		0E845CB09528BC7FADE74BC2966978F7 /* RegistrationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708F3170510ECB0B4C185264340CDED /* RegistrationType.swift */; };
+		23E51E70C82E4959BFE9804F531AC20C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC7BEAA07CE11B9F192E71F2651C0 /* Container.swift */; };
+		3AF091290CDC9F0562BECE97F7C030A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		55C6C1CA7290201C869C0021B509D6BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		571E17A529A0A1890AC93C310CBD6E6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		58098E07E36FF28B04B0196E86F448BA /* Pods-EasyDependency_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 727E955F1DF935291C36F3805EF909C4 /* Pods-EasyDependency_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C2C7B5B32DEB8FFA38A21A9624F4793 /* Pods-EasyDependency_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EFFB741B1AA8C19D17455CE0A8997B /* Pods-EasyDependency_Example-dummy.m */; };
-		5DA19B66B1897A678E2DE17F5F95ABFF /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406EDA2B8A6EB7D55D3ED0D1F95734E8 /* Container.swift */; };
-		C79D502EE0FAFFBE0E035F861BE9B293 /* EasyDependency-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F87CDD6B781F843878EC12F1D7649A /* EasyDependency-dummy.m */; };
-		D45860E822E20591009C2B75 /* PreparationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E422E20591009C2B75 /* PreparationContainer.swift */; };
-		D45860E922E20591009C2B75 /* Container+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E522E20591009C2B75 /* Container+Extensions.swift */; };
-		D45860EA22E20591009C2B75 /* RegistrationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E622E20591009C2B75 /* RegistrationType.swift */; };
-		D45860EB22E20591009C2B75 /* EasyDependencyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E722E20591009C2B75 /* EasyDependencyError.swift */; };
+		B25F62604A9334E0A6544769B2711DC5 /* Container+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CD5300DE45C2D7D7A2C4F62058C9C /* Container+Extensions.swift */; };
+		E930DC6742804CACB90A30EA0E22336D /* EasyDependency-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FADEE1964B5A4E005414B6A92E816A3A /* EasyDependency-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECAD4B7426B1BD1E8A25A119EB41FDC5 /* EasyDependency-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D762D03A10F5BB1CB6DBDABD7331EC /* EasyDependency-dummy.m */; };
+		F50B72DE0EDCEBD70CC6F85A71DF8F91 /* PreparationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF205DB2227E7797F270BDC20CCDE12 /* PreparationContainer.swift */; };
+		F82FEE38EDC8D3713453687050598015 /* EasyDependencyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901CB1A95FF3FCE18D94F4AD8856B1BE /* EasyDependencyError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,34 +32,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00CC939742D62216AD6A3EEF7E55C1D8 /* EasyDependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyDependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		09F414259875D8895FE211868D9F1D2A /* EasyDependency-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-umbrella.h"; sourceTree = "<group>"; };
-		122FBFFC2CABA8B517719A58B241E7D9 /* EasyDependency-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-prefix.pch"; sourceTree = "<group>"; };
+		00CC939742D62216AD6A3EEF7E55C1D8 /* EasyDependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyDependency.framework; path = EasyDependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		237B9CD4F154F5D273D9D2FEB4817A4F /* EasyDependency-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasyDependency-Info.plist"; sourceTree = "<group>"; };
+		24A85C9590F3C92EF3EC455A4F007462 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		2D0116E0D026DCD82BD51659E24AE047 /* Pods-EasyDependency_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EasyDependency_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		30D762D03A10F5BB1CB6DBDABD7331EC /* EasyDependency-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyDependency-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		406EDA2B8A6EB7D55D3ED0D1F95734E8 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.swift; path = EasyDependency/Classes/Container.swift; sourceTree = "<group>"; };
+		337CD5300DE45C2D7D7A2C4F62058C9C /* Container+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Container+Extensions.swift"; path = "EasyDependency/Classes/Container+Extensions.swift"; sourceTree = "<group>"; };
 		42F74C3DC3518472672AFDCDF5B165F3 /* Pods-EasyDependency_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyDependency_Example.modulemap"; sourceTree = "<group>"; };
-		451C0979F30EA8C3B2964649AB9409C7 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8DC0714BDA28EE1F2D8634DB7C1777 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		63F87CDD6B781F843878EC12F1D7649A /* EasyDependency-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyDependency-dummy.m"; sourceTree = "<group>"; };
+		451C0979F30EA8C3B2964649AB9409C7 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyDependency_Example.framework; path = "Pods-EasyDependency_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1065CF07CD906AAF51BE31505B6535 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		60011ADB37E39F5D4CC4549087ABCFCD /* EasyDependency.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyDependency.xcconfig; sourceTree = "<group>"; };
 		67EFFB741B1AA8C19D17455CE0A8997B /* Pods-EasyDependency_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyDependency_Example-dummy.m"; sourceTree = "<group>"; };
 		6C23F5A179BE539713AEC963A1DAEA92 /* Pods-EasyDependency_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyDependency_Example-Info.plist"; sourceTree = "<group>"; };
 		727E955F1DF935291C36F3805EF909C4 /* Pods-EasyDependency_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyDependency_Example-umbrella.h"; sourceTree = "<group>"; };
-		7DAA2A4135FE4EB201544D42FED8DEDF /* EasyDependency.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EasyDependency.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		791DC7BEAA07CE11B9F192E71F2651C0 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.swift; path = EasyDependency/Classes/Container.swift; sourceTree = "<group>"; };
+		901CB1A95FF3FCE18D94F4AD8856B1BE /* EasyDependencyError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EasyDependencyError.swift; path = EasyDependency/Classes/EasyDependencyError.swift; sourceTree = "<group>"; };
 		9A9E983A42C07B1FF2F67507C6CFA424 /* Pods-EasyDependency_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyDependency_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A178B9C518EFEB9ACCD8F6D6D69659C1 /* EasyDependency.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyDependency.xcconfig; sourceTree = "<group>"; };
-		C362C47028DF79A0B4F85423E2E4B006 /* EasyDependency-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasyDependency-Info.plist"; sourceTree = "<group>"; };
-		CC0B8692AF05DE91E4F4117AC7C0557F /* EasyDependency.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyDependency.modulemap; sourceTree = "<group>"; };
-		D45860E422E20591009C2B75 /* PreparationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparationContainer.swift; path = EasyDependency/Classes/PreparationContainer.swift; sourceTree = "<group>"; };
-		D45860E522E20591009C2B75 /* Container+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Container+Extensions.swift"; path = "EasyDependency/Classes/Container+Extensions.swift"; sourceTree = "<group>"; };
-		D45860E622E20591009C2B75 /* RegistrationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationType.swift; path = EasyDependency/Classes/RegistrationType.swift; sourceTree = "<group>"; };
-		D45860E722E20591009C2B75 /* EasyDependencyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EasyDependencyError.swift; path = EasyDependency/Classes/EasyDependencyError.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA969D3FEC2CCA6986A4274D2AD52AC5 /* Registration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = EasyDependency/Classes/Registration.swift; sourceTree = "<group>"; };
+		B90D90517A5679FD91AE7DE566126670 /* EasyDependency-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-prefix.pch"; sourceTree = "<group>"; };
+		BBC92D3D6A0F4DB8B6C5C56FD58B076C /* EasyDependency.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyDependency.modulemap; sourceTree = "<group>"; };
+		BBF205DB2227E7797F270BDC20CCDE12 /* PreparationContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreparationContainer.swift; path = EasyDependency/Classes/PreparationContainer.swift; sourceTree = "<group>"; };
+		C708F3170510ECB0B4C185264340CDED /* RegistrationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationType.swift; path = EasyDependency/Classes/RegistrationType.swift; sourceTree = "<group>"; };
+		DBD168DB788E0DFEE151907765016A30 /* EasyDependency.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EasyDependency.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DFA81C756F531C8D9CB3361135F7D995 /* Pods-EasyDependency_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E0B9E40333FF96E2B0BEC6C1349B0D64 /* Registration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = EasyDependency/Classes/Registration.swift; sourceTree = "<group>"; };
 		E81DDA3F46A727375FE33021B1DF153E /* Pods-EasyDependency_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E9A717F5CC6769CAEBDBBC6F12C40217 /* Pods-EasyDependency_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyDependency_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F109B56F64549D35B59CA43EC10D06F0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FADEE1964B5A4E005414B6A92E816A3A /* EasyDependency-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,33 +71,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5408933C7244EB23983658F08F52FC7 /* Frameworks */ = {
+		C94DFADAE5ABDDD36761C3C36DE02C6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				571E17A529A0A1890AC93C310CBD6E6F /* Foundation.framework in Frameworks */,
+				3AF091290CDC9F0562BECE97F7C030A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1957C909A5B3106A8DB0B90AD0159C60 /* EasyDependency */ = {
-			isa = PBXGroup;
-			children = (
-				406EDA2B8A6EB7D55D3ED0D1F95734E8 /* Container.swift */,
-				E0B9E40333FF96E2B0BEC6C1349B0D64 /* Registration.swift */,
-				D45860E522E20591009C2B75 /* Container+Extensions.swift */,
-				D45860E722E20591009C2B75 /* EasyDependencyError.swift */,
-				D45860E422E20591009C2B75 /* PreparationContainer.swift */,
-				D45860E622E20591009C2B75 /* RegistrationType.swift */,
-				43B232263C93CE5446F8F22FF1E35BB5 /* Pod */,
-				31D56866F4593195AB33B3DAD3A24ABE /* Support Files */,
-			);
-			name = EasyDependency;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		2A2FB71BA235F1F42B05269883716DA0 /* Pods-EasyDependency_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,36 +99,20 @@
 			path = "Target Support Files/Pods-EasyDependency_Example";
 			sourceTree = "<group>";
 		};
-		31D56866F4593195AB33B3DAD3A24ABE /* Support Files */ = {
+		336E820CCBE8C2FBBBDD643FEEF0310D /* EasyDependency */ = {
 			isa = PBXGroup;
 			children = (
-				CC0B8692AF05DE91E4F4117AC7C0557F /* EasyDependency.modulemap */,
-				A178B9C518EFEB9ACCD8F6D6D69659C1 /* EasyDependency.xcconfig */,
-				63F87CDD6B781F843878EC12F1D7649A /* EasyDependency-dummy.m */,
-				C362C47028DF79A0B4F85423E2E4B006 /* EasyDependency-Info.plist */,
-				122FBFFC2CABA8B517719A58B241E7D9 /* EasyDependency-prefix.pch */,
-				09F414259875D8895FE211868D9F1D2A /* EasyDependency-umbrella.h */,
+				791DC7BEAA07CE11B9F192E71F2651C0 /* Container.swift */,
+				337CD5300DE45C2D7D7A2C4F62058C9C /* Container+Extensions.swift */,
+				901CB1A95FF3FCE18D94F4AD8856B1BE /* EasyDependencyError.swift */,
+				BBF205DB2227E7797F270BDC20CCDE12 /* PreparationContainer.swift */,
+				AA969D3FEC2CCA6986A4274D2AD52AC5 /* Registration.swift */,
+				C708F3170510ECB0B4C185264340CDED /* RegistrationType.swift */,
+				E03864C74C788E3CE7D6B6DE15549227 /* Pod */,
+				E4D751B724D4A6A8F0C653B7B500A1FF /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/EasyDependency";
-			sourceTree = "<group>";
-		};
-		43B232263C93CE5446F8F22FF1E35BB5 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				7DAA2A4135FE4EB201544D42FED8DEDF /* EasyDependency.podspec */,
-				4F8DC0714BDA28EE1F2D8634DB7C1777 /* LICENSE */,
-				F109B56F64549D35B59CA43EC10D06F0 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		745BDB3B6E91663E279BD312EFBDCF49 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1957C909A5B3106A8DB0B90AD0159C60 /* EasyDependency */,
-			);
-			name = "Development Pods";
+			name = EasyDependency;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C05505C86E933F358787ABA955EB6014 /* Targets Support Files */ = {
@@ -167,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				745BDB3B6E91663E279BD312EFBDCF49 /* Development Pods */,
+				F7A4147EB4924B283293B61107753D6F /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				EF3A9974BD2C3D8C93AEA2295C77380C /* Products */,
 				C05505C86E933F358787ABA955EB6014 /* Targets Support Files */,
@@ -182,6 +150,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E03864C74C788E3CE7D6B6DE15549227 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DBD168DB788E0DFEE151907765016A30 /* EasyDependency.podspec */,
+				5C1065CF07CD906AAF51BE31505B6535 /* LICENSE */,
+				24A85C9590F3C92EF3EC455A4F007462 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		E4D751B724D4A6A8F0C653B7B500A1FF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBC92D3D6A0F4DB8B6C5C56FD58B076C /* EasyDependency.modulemap */,
+				60011ADB37E39F5D4CC4549087ABCFCD /* EasyDependency.xcconfig */,
+				30D762D03A10F5BB1CB6DBDABD7331EC /* EasyDependency-dummy.m */,
+				237B9CD4F154F5D273D9D2FEB4817A4F /* EasyDependency-Info.plist */,
+				B90D90517A5679FD91AE7DE566126670 /* EasyDependency-prefix.pch */,
+				FADEE1964B5A4E005414B6A92E816A3A /* EasyDependency-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EasyDependency";
+			sourceTree = "<group>";
+		};
 		EF3A9974BD2C3D8C93AEA2295C77380C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,17 +183,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F7A4147EB4924B283293B61107753D6F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				336E820CCBE8C2FBBBDD643FEEF0310D /* EasyDependency */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D881A40A17F36B097F7D225355EE390F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4805B893CFAA05F081F85681F7FBA71B /* EasyDependency-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E09524157741739A26E6DF751EBF9AB0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,17 +202,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E53511FE97C9D4EF613725F0443825EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E930DC6742804CACB90A30EA0E22336D /* EasyDependency-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		99523153B59046017119B05D0A8FF641 /* EasyDependency */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCEFF5180115DC398B25FCB1A4BDCB74 /* Build configuration list for PBXNativeTarget "EasyDependency" */;
+			buildConfigurationList = F40631C1D594E8FBBAB438B62772CD69 /* Build configuration list for PBXNativeTarget "EasyDependency" */;
 			buildPhases = (
-				D881A40A17F36B097F7D225355EE390F /* Headers */,
-				83E6F9790F32570CB6810AB55B2F313F /* Sources */,
-				D5408933C7244EB23983658F08F52FC7 /* Frameworks */,
-				03039E4136B485A81A2BA1A4A247A95F /* Resources */,
+				E53511FE97C9D4EF613725F0443825EF /* Headers */,
+				61EF0B14078F734E51CA6664C4712D27 /* Sources */,
+				C94DFADAE5ABDDD36761C3C36DE02C6C /* Frameworks */,
+				0976E6497E0C26BF50CA3CD16AA201E4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -278,7 +278,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		03039E4136B485A81A2BA1A4A247A95F /* Resources */ = {
+		0976E6497E0C26BF50CA3CD16AA201E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,25 +295,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		61EF0B14078F734E51CA6664C4712D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25F62604A9334E0A6544769B2711DC5 /* Container+Extensions.swift in Sources */,
+				23E51E70C82E4959BFE9804F531AC20C /* Container.swift in Sources */,
+				ECAD4B7426B1BD1E8A25A119EB41FDC5 /* EasyDependency-dummy.m in Sources */,
+				F82FEE38EDC8D3713453687050598015 /* EasyDependencyError.swift in Sources */,
+				F50B72DE0EDCEBD70CC6F85A71DF8F91 /* PreparationContainer.swift in Sources */,
+				022A2A85D6D19351F31FB01364F25571 /* Registration.swift in Sources */,
+				0E845CB09528BC7FADE74BC2966978F7 /* RegistrationType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77D43ECDA44DDA041CEF1268099EF064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5C2C7B5B32DEB8FFA38A21A9624F4793 /* Pods-EasyDependency_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83E6F9790F32570CB6810AB55B2F313F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DA19B66B1897A678E2DE17F5F95ABFF /* Container.swift in Sources */,
-				D45860E822E20591009C2B75 /* PreparationContainer.swift in Sources */,
-				D45860EA22E20591009C2B75 /* RegistrationType.swift in Sources */,
-				C79D502EE0FAFFBE0E035F861BE9B293 /* EasyDependency-dummy.m in Sources */,
-				D45860E922E20591009C2B75 /* Container+Extensions.swift in Sources */,
-				D45860EB22E20591009C2B75 /* EasyDependencyError.swift in Sources */,
-				29B8F7ACE1069C6D5979BDA2DA877C8C /* Registration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,69 +329,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C0537985608BB7F48CBEAE19DFFC4C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A178B9C518EFEB9ACCD8F6D6D69659C1 /* EasyDependency.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EasyDependency/EasyDependency-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EasyDependency/EasyDependency-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EasyDependency/EasyDependency.modulemap";
-				PRODUCT_MODULE_NAME = EasyDependency;
-				PRODUCT_NAME = EasyDependency;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1C3357649EEC7B268F761154726DE8E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A178B9C518EFEB9ACCD8F6D6D69659C1 /* EasyDependency.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EasyDependency/EasyDependency-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EasyDependency/EasyDependency-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EasyDependency/EasyDependency.modulemap";
-				PRODUCT_MODULE_NAME = EasyDependency;
-				PRODUCT_NAME = EasyDependency;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -445,7 +382,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -515,6 +453,37 @@
 			};
 			name = Debug;
 		};
+		81B64F6FF3E9D3682331F9173E371993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60011ADB37E39F5D4CC4549087ABCFCD /* EasyDependency.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyDependency/EasyDependency-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyDependency/EasyDependency-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyDependency/EasyDependency.modulemap";
+				PRODUCT_MODULE_NAME = EasyDependency;
+				PRODUCT_NAME = EasyDependency;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		99C590BADB15904C08D040A42A82D04A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFA81C756F531C8D9CB3361135F7D995 /* Pods-EasyDependency_Example.debug.xcconfig */;
@@ -547,6 +516,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		E659FAEFE589D644D4F0ADAC47E1B037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60011ADB37E39F5D4CC4549087ABCFCD /* EasyDependency.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyDependency/EasyDependency-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyDependency/EasyDependency-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyDependency/EasyDependency.modulemap";
+				PRODUCT_MODULE_NAME = EasyDependency;
+				PRODUCT_NAME = EasyDependency;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		FEA778E98D2552E0BDF083885FC3E2F3 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -603,11 +604,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCEFF5180115DC398B25FCB1A4BDCB74 /* Build configuration list for PBXNativeTarget "EasyDependency" */ = {
+		F40631C1D594E8FBBAB438B62772CD69 /* Build configuration list for PBXNativeTarget "EasyDependency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C3357649EEC7B268F761154726DE8E1 /* Debug */,
-				0C0537985608BB7F48CBEAE19DFFC4C6 /* Release */,
+				81B64F6FF3E9D3682331F9173E371993 /* Debug */,
+				E659FAEFE589D644D4F0ADAC47E1B037 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
