@@ -67,14 +67,4 @@ public class DIContainer {
 		guard let mapped = total as? T else { throw DIError.implementationNotFound(name: String(describing: T.self)) }
 		return mapped
 	}
-	
-//	public func resolve<T: Collection>(_ interface: T.Element.Type = T.Element.self) throws -> T {
-//		let filteredRegistrations: [Registration<T.Element>] = registrations.compactMap { $0 as? Registration<T.Element> }
-//		let filtered: [T.Element] = try filteredRegistrations.map { try $0.resolve(logging: logging) }
-//		let superContainerFiltered: [T.Element] = (try superContainer?.resolve(interface)) ?? []
-//		let total = filtered + superContainerFiltered
-//
-//		guard let mapped = total as? T else { throw DIError.implementationNotFound(name: String(describing: T.self)) }
-//		return mapped
-//	}
 }
