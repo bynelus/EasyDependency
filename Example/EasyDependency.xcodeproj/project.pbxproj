@@ -13,12 +13,6 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		6EF8A8BA5E28DFB9DB0FCC30 /* Pods_EasyDependency_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC784986338EFC6C0435D0D6 /* Pods_EasyDependency_Example.framework */; };
-		D405D5041FA6673A00C382E6 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D5031FA6673A00C382E6 /* AppContainer.swift */; };
-		D405D5071FA667A600C382E6 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D5061FA667A600C382E6 /* Storage.swift */; };
-		D405D5091FA667F900C382E6 /* StorageAImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D5081FA667F900C382E6 /* StorageAImpl.swift */; };
-		D405D50B1FA66AC800C382E6 /* FeatureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */; };
-		D4156120204C61A60059F015 /* StorageBImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415611F204C61A60059F015 /* StorageBImpl.swift */; };
-		D45860E322E1F545009C2B75 /* StorageCImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45860E222E1F545009C2B75 /* StorageCImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +30,6 @@
 		8110DA936CB40F6EFC56F9FB /* Pods-EasyDependency_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyDependency_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyDependency_Tests/Pods-EasyDependency_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A18D80CC255CC85601F2A068 /* Pods_EasyDependency_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EE23245CF2BCB1D2661C7E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D405D5031FA6673A00C382E6 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
-		D405D5061FA667A600C382E6 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		D405D5081FA667F900C382E6 /* StorageAImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAImpl.swift; sourceTree = "<group>"; };
-		D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureContainer.swift; sourceTree = "<group>"; };
-		D415611F204C61A60059F015 /* StorageBImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageBImpl.swift; sourceTree = "<group>"; };
-		D45860E222E1F545009C2B75 /* StorageCImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCImpl.swift; sourceTree = "<group>"; };
 		E371C0ADEF8EB5E8DE4AA561 /* Pods-EasyDependency_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyDependency_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyDependency_Example/Pods-EasyDependency_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EC784986338EFC6C0435D0D6 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,7 +68,6 @@
 		607FACD21AFB9204008FA782 /* Example for EasyDependency */ = {
 			isa = PBXGroup;
 			children = (
-				D45860E022E1F51F009C2B75 /* Examples */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -108,37 +95,6 @@
 				34B6E78CE304EC96017220CD /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		D405D5021FA6672800C382E6 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				D405D5031FA6673A00C382E6 /* AppContainer.swift */,
-				D405D50A1FA66AC800C382E6 /* FeatureContainer.swift */,
-			);
-			name = Configuration;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		D405D5051FA6678A00C382E6 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				D405D5061FA667A600C382E6 /* Storage.swift */,
-				D405D5081FA667F900C382E6 /* StorageAImpl.swift */,
-				D415611F204C61A60059F015 /* StorageBImpl.swift */,
-				D45860E222E1F545009C2B75 /* StorageCImpl.swift */,
-			);
-			name = Storage;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		D45860E022E1F51F009C2B75 /* Examples */ = {
-			isa = PBXGroup;
-			children = (
-				D405D5021FA6672800C382E6 /* Configuration */,
-				D405D5051FA6678A00C382E6 /* Storage */,
-			);
-			path = Examples;
 			sourceTree = "<group>";
 		};
 		EC5850E540AAE53297A2D7B3 /* Pods */ = {
@@ -276,13 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				D405D5071FA667A600C382E6 /* Storage.swift in Sources */,
-				D405D5091FA667F900C382E6 /* StorageAImpl.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				D405D50B1FA66AC800C382E6 /* FeatureContainer.swift in Sources */,
-				D405D5041FA6673A00C382E6 /* AppContainer.swift in Sources */,
-				D4156120204C61A60059F015 /* StorageBImpl.swift in Sources */,
-				D45860E322E1F545009C2B75 /* StorageCImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

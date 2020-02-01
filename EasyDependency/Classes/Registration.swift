@@ -8,6 +8,18 @@
 
 import Foundation
 
+public enum RegistrationType {
+	case lazyInstance
+	case lazySingleton
+	
+	public var isSingleton: Bool {
+		switch self {
+		case .lazyInstance: return false
+		case .lazySingleton: return true
+		}
+	}
+}
+
 class Registration<T> {
 	let type: RegistrationType
     let implementation: () throws -> T

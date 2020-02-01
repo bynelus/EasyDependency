@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		022A2A85D6D19351F31FB01364F25571 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA969D3FEC2CCA6986A4274D2AD52AC5 /* Registration.swift */; };
-		0E845CB09528BC7FADE74BC2966978F7 /* RegistrationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C708F3170510ECB0B4C185264340CDED /* RegistrationType.swift */; };
-		23E51E70C82E4959BFE9804F531AC20C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC7BEAA07CE11B9F192E71F2651C0 /* Container.swift */; };
+		23E51E70C82E4959BFE9804F531AC20C /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DC7BEAA07CE11B9F192E71F2651C0 /* DIContainer.swift */; };
 		3AF091290CDC9F0562BECE97F7C030A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		55C6C1CA7290201C869C0021B509D6BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		58098E07E36FF28B04B0196E86F448BA /* Pods-EasyDependency_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 727E955F1DF935291C36F3805EF909C4 /* Pods-EasyDependency_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C2C7B5B32DEB8FFA38A21A9624F4793 /* Pods-EasyDependency_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EFFB741B1AA8C19D17455CE0A8997B /* Pods-EasyDependency_Example-dummy.m */; };
-		B25F62604A9334E0A6544769B2711DC5 /* Container+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CD5300DE45C2D7D7A2C4F62058C9C /* Container+Extensions.swift */; };
+		D4E5E31823E5CCB100121327 /* PropertyWrapper+DIInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5E31723E5CCB100121327 /* PropertyWrapper+DIInject.swift */; };
+		D4E5E31A23E5CD6800121327 /* PropertyWrapper+DIInjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5E31923E5CD6800121327 /* PropertyWrapper+DIInjectList.swift */; };
+		D4E5E31C23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5E31B23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift */; };
 		E930DC6742804CACB90A30EA0E22336D /* EasyDependency-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FADEE1964B5A4E005414B6A92E816A3A /* EasyDependency-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECAD4B7426B1BD1E8A25A119EB41FDC5 /* EasyDependency-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D762D03A10F5BB1CB6DBDABD7331EC /* EasyDependency-dummy.m */; };
-		F50B72DE0EDCEBD70CC6F85A71DF8F91 /* PreparationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF205DB2227E7797F270BDC20CCDE12 /* PreparationContainer.swift */; };
-		F82FEE38EDC8D3713453687050598015 /* EasyDependencyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901CB1A95FF3FCE18D94F4AD8856B1BE /* EasyDependencyError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,30 +31,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00CC939742D62216AD6A3EEF7E55C1D8 /* EasyDependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyDependency.framework; path = EasyDependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CC939742D62216AD6A3EEF7E55C1D8 /* EasyDependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyDependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		237B9CD4F154F5D273D9D2FEB4817A4F /* EasyDependency-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasyDependency-Info.plist"; sourceTree = "<group>"; };
-		24A85C9590F3C92EF3EC455A4F007462 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		24A85C9590F3C92EF3EC455A4F007462 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2D0116E0D026DCD82BD51659E24AE047 /* Pods-EasyDependency_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EasyDependency_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		30D762D03A10F5BB1CB6DBDABD7331EC /* EasyDependency-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyDependency-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		337CD5300DE45C2D7D7A2C4F62058C9C /* Container+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Container+Extensions.swift"; path = "EasyDependency/Classes/Container+Extensions.swift"; sourceTree = "<group>"; };
 		42F74C3DC3518472672AFDCDF5B165F3 /* Pods-EasyDependency_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyDependency_Example.modulemap"; sourceTree = "<group>"; };
-		451C0979F30EA8C3B2964649AB9409C7 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyDependency_Example.framework; path = "Pods-EasyDependency_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C1065CF07CD906AAF51BE31505B6535 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		451C0979F30EA8C3B2964649AB9409C7 /* Pods_EasyDependency_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyDependency_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1065CF07CD906AAF51BE31505B6535 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		60011ADB37E39F5D4CC4549087ABCFCD /* EasyDependency.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyDependency.xcconfig; sourceTree = "<group>"; };
 		67EFFB741B1AA8C19D17455CE0A8997B /* Pods-EasyDependency_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyDependency_Example-dummy.m"; sourceTree = "<group>"; };
 		6C23F5A179BE539713AEC963A1DAEA92 /* Pods-EasyDependency_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyDependency_Example-Info.plist"; sourceTree = "<group>"; };
 		727E955F1DF935291C36F3805EF909C4 /* Pods-EasyDependency_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyDependency_Example-umbrella.h"; sourceTree = "<group>"; };
-		791DC7BEAA07CE11B9F192E71F2651C0 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.swift; path = EasyDependency/Classes/Container.swift; sourceTree = "<group>"; };
-		901CB1A95FF3FCE18D94F4AD8856B1BE /* EasyDependencyError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EasyDependencyError.swift; path = EasyDependency/Classes/EasyDependencyError.swift; sourceTree = "<group>"; };
+		791DC7BEAA07CE11B9F192E71F2651C0 /* DIContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DIContainer.swift; path = EasyDependency/Classes/DIContainer.swift; sourceTree = "<group>"; };
 		9A9E983A42C07B1FF2F67507C6CFA424 /* Pods-EasyDependency_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyDependency_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA969D3FEC2CCA6986A4274D2AD52AC5 /* Registration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Registration.swift; path = EasyDependency/Classes/Registration.swift; sourceTree = "<group>"; };
 		B90D90517A5679FD91AE7DE566126670 /* EasyDependency-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyDependency-prefix.pch"; sourceTree = "<group>"; };
 		BBC92D3D6A0F4DB8B6C5C56FD58B076C /* EasyDependency.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyDependency.modulemap; sourceTree = "<group>"; };
-		BBF205DB2227E7797F270BDC20CCDE12 /* PreparationContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreparationContainer.swift; path = EasyDependency/Classes/PreparationContainer.swift; sourceTree = "<group>"; };
-		C708F3170510ECB0B4C185264340CDED /* RegistrationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationType.swift; path = EasyDependency/Classes/RegistrationType.swift; sourceTree = "<group>"; };
-		DBD168DB788E0DFEE151907765016A30 /* EasyDependency.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EasyDependency.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D4E5E31723E5CCB100121327 /* PropertyWrapper+DIInject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PropertyWrapper+DIInject.swift"; path = "EasyDependency/Classes/PropertyWrapper+DIInject.swift"; sourceTree = "<group>"; };
+		D4E5E31923E5CD6800121327 /* PropertyWrapper+DIInjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PropertyWrapper+DIInjectList.swift"; path = "EasyDependency/Classes/PropertyWrapper+DIInjectList.swift"; sourceTree = "<group>"; };
+		D4E5E31B23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PropertyWrapper+DIInjectOptional.swift"; path = "EasyDependency/Classes/PropertyWrapper+DIInjectOptional.swift"; sourceTree = "<group>"; };
+		DBD168DB788E0DFEE151907765016A30 /* EasyDependency.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EasyDependency.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DFA81C756F531C8D9CB3361135F7D995 /* Pods-EasyDependency_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E81DDA3F46A727375FE33021B1DF153E /* Pods-EasyDependency_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E9A717F5CC6769CAEBDBBC6F12C40217 /* Pods-EasyDependency_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyDependency_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -102,12 +100,11 @@
 		336E820CCBE8C2FBBBDD643FEEF0310D /* EasyDependency */ = {
 			isa = PBXGroup;
 			children = (
-				791DC7BEAA07CE11B9F192E71F2651C0 /* Container.swift */,
-				337CD5300DE45C2D7D7A2C4F62058C9C /* Container+Extensions.swift */,
-				901CB1A95FF3FCE18D94F4AD8856B1BE /* EasyDependencyError.swift */,
-				BBF205DB2227E7797F270BDC20CCDE12 /* PreparationContainer.swift */,
+				D4E5E31723E5CCB100121327 /* PropertyWrapper+DIInject.swift */,
+				D4E5E31923E5CD6800121327 /* PropertyWrapper+DIInjectList.swift */,
+				D4E5E31B23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift */,
+				791DC7BEAA07CE11B9F192E71F2651C0 /* DIContainer.swift */,
 				AA969D3FEC2CCA6986A4274D2AD52AC5 /* Registration.swift */,
-				C708F3170510ECB0B4C185264340CDED /* RegistrationType.swift */,
 				E03864C74C788E3CE7D6B6DE15549227 /* Pod */,
 				E4D751B724D4A6A8F0C653B7B500A1FF /* Support Files */,
 			);
@@ -299,13 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B25F62604A9334E0A6544769B2711DC5 /* Container+Extensions.swift in Sources */,
-				23E51E70C82E4959BFE9804F531AC20C /* Container.swift in Sources */,
+				D4E5E31823E5CCB100121327 /* PropertyWrapper+DIInject.swift in Sources */,
+				23E51E70C82E4959BFE9804F531AC20C /* DIContainer.swift in Sources */,
+				D4E5E31C23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift in Sources */,
 				ECAD4B7426B1BD1E8A25A119EB41FDC5 /* EasyDependency-dummy.m in Sources */,
-				F82FEE38EDC8D3713453687050598015 /* EasyDependencyError.swift in Sources */,
-				F50B72DE0EDCEBD70CC6F85A71DF8F91 /* PreparationContainer.swift in Sources */,
+				D4E5E31A23E5CD6800121327 /* PropertyWrapper+DIInjectList.swift in Sources */,
 				022A2A85D6D19351F31FB01364F25571 /* Registration.swift in Sources */,
-				0E845CB09528BC7FADE74BC2966978F7 /* RegistrationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,8 +378,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
