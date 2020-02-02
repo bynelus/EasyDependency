@@ -48,14 +48,16 @@ open class DIContainer {
 		}
 	}
 	
-	public func resolve<T: Collection>(filePath: String = #file, line: Int = #line, function: String = #function) throws -> T {
+	public func resolve<T: Collection>(filePath: String = #file, line: Int = #line, function: String = #function, disableLogging: Bool = false) throws -> T {
 		let filteredRegistrations: [Registration<T.Element>] = registrations.compactMap { $0 as? Registration<T.Element> }
 		let filtered: [T.Element] = try filteredRegistrations.map { try $0.resolve(logging: logging) }
-		let superContainerFiltered: [T.Element] = (try? superContainer?.resolve(filePath: filePath, line: line, function: function)) ?? []
+		let superContainerFiltered: [T.Element] = (try? superContainer?.resolve(filePath: filePath, line: line, function: function, disableLogging: true)) ?? []
 		let total = filtered + superContainerFiltered
 		guard let mapped = total as? T else {
 			let interfaceName = String(describing: T.self)
-			logCrashIfEnabled(interface: interfaceName, filePath: filePath, line: line, function: function)
+			if !disableLogging {
+				logCrashIfEnabled(interface: interfaceName, filePath: filePath, line: line, function: function)
+			}
 			throw DIError.implementationNotFound(name: interfaceName)
 		}
 		return mapped
