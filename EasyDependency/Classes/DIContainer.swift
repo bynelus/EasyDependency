@@ -53,14 +53,13 @@ open class DIContainer {
 		let filtered: [T.Element] = try filteredRegistrations.map { try $0.resolve(logging: logging) }
 		var superFiltered: [T.Element] = []
 		
-		if let superContainer = superContainer {
-			do {
-				superFiltered = try superContainer.resolve(filePath: filePath, line: line, function: function, disableLogging: true)
-			} catch {
-				// If this fails, that's not a problem. It could be that there are no implementations registered.
-			}
+		/// Also look for implementations in the `super container`. If so, then those will be combined with the result of this container.
+		if let superContainer = superContainer,
+			let items = try? superContainer.resolve(filePath: filePath, line: line, function: function, disableLogging: true) as [T.Element] {
+			superFiltered = items
 		}
-		
+
+		/// Combine all results and map it to the generic type. If that's not possible, which should never be the case, then we throw an error.
 		let total = filtered + superFiltered
 		guard let mapped = total as? T else {
 			let interfaceName = String(describing: T.self)

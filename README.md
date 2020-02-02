@@ -23,7 +23,7 @@ EasyDependency is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'EasyDependency', '~> 2.0'
+pod 'EasyDependency', '~> 3.0'
 ```
 
 ## Summary
@@ -63,11 +63,10 @@ let storage: Storage? = try? (appContainer.resolve() as Storage)
 ## Credits
 
 This concept is created together with Jelle Heemskerk ([Github](https://github.com/jelleheemskerk)).
-Also credits to Quentin Jin for creating [Schedule](http://https://github.com/luoxiu/Schedule), a very elegant and intuïtive way of scheduling jobs.
 
 ## Author
 
-NielsKoole ([Twitter](https://twitter.com/nielskoole))
+Niels Koole
 
 ## License
 
