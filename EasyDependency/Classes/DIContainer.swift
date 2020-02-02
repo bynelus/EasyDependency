@@ -36,11 +36,11 @@ open class DIContainer {
 		registrations.append(registration)
 	}
 	
-	public func resolve<T>(filePath: String = #file, line: Int = #line, function: String = #function) throws -> T {
+	public func resolve<T>(filePath: String = #file, line: Int = #line, function: String = #function, disableLogging: Bool = false) throws -> T {
 		if let first = registrations.first(where: { ($0 as? Registration<T>) != nil }) as? Registration<T> {
 			return try first.resolve(logging: logging)
 		} else if let container = superContainer {
-			return try container.resolve(filePath: filePath, line: line, function: function)
+			return try container.resolve(filePath: filePath, line: line, function: function, disableLogging: disableLogging)
 		} else {
 			let interfaceName = String(describing: T.self)
 			logCrashIfEnabled(interface: interfaceName, filePath: filePath, line: line, function: function)
@@ -51,8 +51,17 @@ open class DIContainer {
 	public func resolve<T: Collection>(filePath: String = #file, line: Int = #line, function: String = #function, disableLogging: Bool = false) throws -> T {
 		let filteredRegistrations: [Registration<T.Element>] = registrations.compactMap { $0 as? Registration<T.Element> }
 		let filtered: [T.Element] = try filteredRegistrations.map { try $0.resolve(logging: logging) }
-		let superContainerFiltered: [T.Element] = (try? superContainer?.resolve(filePath: filePath, line: line, function: function, disableLogging: true)) ?? []
-		let total = filtered + superContainerFiltered
+		var superFiltered: [T.Element] = []
+		
+		if let superContainer = superContainer {
+			do {
+				superFiltered = try superContainer.resolve(filePath: filePath, line: line, function: function, disableLogging: true)
+			} catch {
+				// If this fails, that's not a problem. It could be that there are no implementations registered.
+			}
+		}
+		
+		let total = filtered + superFiltered
 		guard let mapped = total as? T else {
 			let interfaceName = String(describing: T.self)
 			if !disableLogging {

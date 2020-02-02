@@ -15,7 +15,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- Swift 5.0
+- Swift 5.1
 
 ## Installation
 
@@ -36,34 +36,18 @@ There is no focus on adding support for circular dependencies or automatic injec
 - [x] Register & retrieve dependencies from a DI container.
 - [x] Resolve list of implementations.
 - [x] Register dependencies as singletons.
+- [x] Added property wrappers for auto property injection.
 
 ## Usage
-
-### Create dependency container
-
-```swift
-import EasyDependency
-
-class AppContainer: Container {
-    var superContainer: Container?
-    var registrations: [Any] = []
-    var logging: Bool = false
-
-    required init(container: Container? = nil) {
-        self.superContainer = container
-    }
-}
-```
 
 ### Register a dependency
 
 This way you register an implementation on a protocol.
 
 ```swift
-let appContainer = AppContainer()
-try appContainer.register(Storage.self) { _ in StorageAImpl() }
-try appContainer.register(Storage.self) { _ in StorageBImpl() }
-try appContainer.register(Storage.self, .lazySingleton) { _ in StorageBImpl() }
+try DISharedContainer.register(Storage.self) { _ in StorageAImpl() }
+try DISharedContainer.register(Storage.self) { _ in StorageBImpl() }
+try DISharedContainer.register(Storage.self, .lazySingleton) { _ in StorageBImpl() }
 ```
 
 ### Retrieve a dependency
@@ -71,22 +55,9 @@ try appContainer.register(Storage.self, .lazySingleton) { _ in StorageBImpl() }
 You can retrieve the implementation by resolve the dependency by its interface.
 
 ```swift
-let storageImplementation: Storage? = try? appContainer.resolve()
-let storageList: [Storage] = appContainer.resolveList()
-```
-
-### Feature containers
-
-You can create feature containers including the super container. Registrations on the feature container are used in favor of the super container.
-
-```swift
-let appContainer = AppContainer()
-try appContainer.register(Storage.self) { _ in StorageAImpl() }
-try appContainer.register(String.self) { _ in "StringExample" }
-
-let featureContainer = FeatureContainer(container: appContainer)
-try featureContainer.register(Storage.self) { container in StorageBImpl(string: try container.resolve()) }
-let storageImplementation: Storage? = try? featureContainer.resolve() // StorageBImpl() will be returned.
+let storage: Storage = try appContainer.resolve()
+let storageList: [Storage] = try appContainer.resolve()
+let storage: Storage? = try? (appContainer.resolve() as Storage)
 ```
 
 ## Credits
