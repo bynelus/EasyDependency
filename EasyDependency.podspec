@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyDependency'
-  s.version          = '3.0.2'
+  s.version          = '3.0.3'
   s.summary          = 'EasyDependency is a very lightweight dependency injection framework, without magic.'
   s.description      = <<-DESC
 EasyDependency is a very lightweight dependency injection framework, without magic. Just a container to register and resolve dependencies.

@@ -39,10 +39,6 @@ class Registration<T> {
 		print("----- EASYDEPENDENCY -----> \(String(describing: instance)) (Duration: \(diff) ms)")
 		return instance
 	}
-	
-	func prepareImplementation(logging: Bool) throws {
-		cachedInstance = try createImplementationInstance(logging: logging)
-	}
     
 	func resolve(logging: Bool) throws -> T {
         guard let cachedInstance = cachedInstance else {

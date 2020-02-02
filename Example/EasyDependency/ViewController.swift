@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 			let list: [UIView] = try DISharedContainer.resolve()
 			let optional = try? (DISharedContainer.resolve() as UIView)
 			let optional2 = try? (DISharedContainer.resolve() as Int)
-			let nonOptional2: Int = try DISharedContainer.resolve()
+			let nonOptional2: Double = try DISharedContainer.resolve()
 			
 			print(nonOptional)
 			print(list)
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 			print(someView)
 			
 		} catch let e {
-			print(e)
+			print(e.localizedDescription)
 		}
     }
 }
