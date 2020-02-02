@@ -18,7 +18,7 @@ public struct DIInject<Value> {
 
 	public init() {
 		do {
-			_value = try DIContainer.shared.resolve(Value.self)
+			_value = try DIContainer.shared.resolve()
 		} catch let e {
 			fatalError(e.localizedDescription)
 		}
@@ -26,7 +26,7 @@ public struct DIInject<Value> {
 	
 	public init(container: DIContainer) {
 		do {
-			_value = try container.resolve(Value.self)
+			_value = try container.resolve()
 		} catch let e {
 			fatalError(e.localizedDescription)
 		}

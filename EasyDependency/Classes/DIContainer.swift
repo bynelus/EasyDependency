@@ -40,29 +40,20 @@ public class DIContainer {
 		registrations.append(registration)
 	}
 	
-	public func resolve<T>(_ interface: T.Type = T.self) throws -> T {
+	public func resolve<T>() throws -> T {
 		if let first = registrations.first(where: { ($0 as? Registration<T>) != nil }) as? Registration<T> {
 			return try first.resolve(logging: logging)
 		} else if let container = superContainer {
-			return try container.resolve(interface)
+			return try container.resolve()
 		} else {
 			throw DIError.implementationNotFound(name: String(describing: T.self))
 		}
 	}
 	
-	public func resolve<T>(_ interface: T.Type) -> T? {
-		do {
-			let x: T = try resolve(interface)
-			return x
-		} catch {
-			return nil
-		}
-	}
-	
-	public func resolve<T: Collection>(_ interface: T.Element.Type = T.Element.self) throws -> T {
+	public func resolve<T: Collection>() throws -> T {
 		let filteredRegistrations: [Registration<T.Element>] = registrations.compactMap { $0 as? Registration<T.Element> }
 		let filtered: [T.Element] = try filteredRegistrations.map { try $0.resolve(logging: logging) }
-		let superContainerFiltered: [T.Element] = (try superContainer?.resolve(interface)) ?? []
+		let superContainerFiltered: [T.Element] = (try superContainer?.resolve()) ?? []
 		let total = filtered + superContainerFiltered
 		guard let mapped = total as? T else { throw DIError.implementationNotFound(name: String(describing: T.self)) }
 		return mapped

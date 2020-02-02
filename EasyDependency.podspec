@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyDependency'
-  s.version          = '3.0.0'
+  s.version          = '3.0.1'
   s.summary          = 'EasyDependency is a very lightweight dependency injection framework, without magic.'
   s.description      = <<-DESC
 EasyDependency is a very lightweight dependency injection framework, without magic. Just a container to register and resolve dependencies.
-There is no focus on adding support for circular dependencies or automatic injection of dependencies. Simplicity is key.
+There is no focus on adding support for circular dependencies. Simplicity is key.
                        DESC
   s.homepage         = 'https://github.com/bynelus/EasyDependency'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

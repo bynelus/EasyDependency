@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EasyDependency
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+		
+		try! DIContainer.shared.register(UIView.self) { _ in UILabel(frame: .zero) }
+		try! DIContainer.shared.register(UIView.self) { _ in UIButton(frame: .zero) }
+		try! DIContainer.shared.register(UIView.self) { _ in UISwitch(frame: .zero) }
+		try! DIContainer.shared.register(Int.self) { _ in 1234 }
+		
+		let window = UIWindow(frame: UIScreen.main.bounds)
+		window.rootViewController = ViewController()
+		window.makeKeyAndVisible()
+		self.window = window
+		
+		return true
     }
 }
 

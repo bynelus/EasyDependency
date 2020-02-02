@@ -8,17 +8,17 @@
 import Foundation
 
 @propertyWrapper
-public struct DIInjectList<Value> {
-	private var _value: [Value]
+public struct DIInjectList<Value: Collection> {
+	private var _value: Value
 	
-    public var wrappedValue: [Value] {
+    public var wrappedValue: Value {
 		get { return _value }
 		set { _value = newValue }
     }
 
 	public init() {
 		do {
-			_value = try DIContainer.shared.resolve(Value.self)
+			_value = try DIContainer.shared.resolve()
 		} catch let e {
 			fatalError(e.localizedDescription)
 		}
@@ -26,7 +26,7 @@ public struct DIInjectList<Value> {
 	
 	public init(container: DIContainer) {
 		do {
-			_value = try container.resolve(Value.self)
+			_value = try container.resolve()
 		} catch let e {
 			fatalError(e.localizedDescription)
 		}

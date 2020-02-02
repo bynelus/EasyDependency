@@ -15,7 +15,6 @@
 		5C2C7B5B32DEB8FFA38A21A9624F4793 /* Pods-EasyDependency_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EFFB741B1AA8C19D17455CE0A8997B /* Pods-EasyDependency_Example-dummy.m */; };
 		D4E5E31823E5CCB100121327 /* PropertyWrapper+DIInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5E31723E5CCB100121327 /* PropertyWrapper+DIInject.swift */; };
 		D4E5E31A23E5CD6800121327 /* PropertyWrapper+DIInjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5E31923E5CD6800121327 /* PropertyWrapper+DIInjectList.swift */; };
-		D4E5E31C23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5E31B23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift */; };
 		E930DC6742804CACB90A30EA0E22336D /* EasyDependency-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FADEE1964B5A4E005414B6A92E816A3A /* EasyDependency-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECAD4B7426B1BD1E8A25A119EB41FDC5 /* EasyDependency-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D762D03A10F5BB1CB6DBDABD7331EC /* EasyDependency-dummy.m */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		BBC92D3D6A0F4DB8B6C5C56FD58B076C /* EasyDependency.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyDependency.modulemap; sourceTree = "<group>"; };
 		D4E5E31723E5CCB100121327 /* PropertyWrapper+DIInject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PropertyWrapper+DIInject.swift"; path = "EasyDependency/Classes/PropertyWrapper+DIInject.swift"; sourceTree = "<group>"; };
 		D4E5E31923E5CD6800121327 /* PropertyWrapper+DIInjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PropertyWrapper+DIInjectList.swift"; path = "EasyDependency/Classes/PropertyWrapper+DIInjectList.swift"; sourceTree = "<group>"; };
-		D4E5E31B23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PropertyWrapper+DIInjectOptional.swift"; path = "EasyDependency/Classes/PropertyWrapper+DIInjectOptional.swift"; sourceTree = "<group>"; };
 		DBD168DB788E0DFEE151907765016A30 /* EasyDependency.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EasyDependency.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DFA81C756F531C8D9CB3361135F7D995 /* Pods-EasyDependency_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E81DDA3F46A727375FE33021B1DF153E /* Pods-EasyDependency_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyDependency_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			children = (
 				D4E5E31723E5CCB100121327 /* PropertyWrapper+DIInject.swift */,
 				D4E5E31923E5CD6800121327 /* PropertyWrapper+DIInjectList.swift */,
-				D4E5E31B23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift */,
 				791DC7BEAA07CE11B9F192E71F2651C0 /* DIContainer.swift */,
 				AA969D3FEC2CCA6986A4274D2AD52AC5 /* Registration.swift */,
 				E03864C74C788E3CE7D6B6DE15549227 /* Pod */,
@@ -298,7 +295,6 @@
 			files = (
 				D4E5E31823E5CCB100121327 /* PropertyWrapper+DIInject.swift in Sources */,
 				23E51E70C82E4959BFE9804F531AC20C /* DIContainer.swift in Sources */,
-				D4E5E31C23E5EB9100121327 /* PropertyWrapper+DIInjectOptional.swift in Sources */,
 				ECAD4B7426B1BD1E8A25A119EB41FDC5 /* EasyDependency-dummy.m in Sources */,
 				D4E5E31A23E5CD6800121327 /* PropertyWrapper+DIInjectList.swift in Sources */,
 				022A2A85D6D19351F31FB01364F25571 /* Registration.swift in Sources */,
