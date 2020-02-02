@@ -20,11 +20,11 @@ class ViewController: UIViewController {
 		
         // Do any additional setup after loading the view, typically from a nib.
 		do {
-			let nonOptional: UIView = try DIContainer.shared.resolve()
-			let list: [UIView] = try DIContainer.shared.resolve()
-			let optional = try? (DIContainer.shared.resolve() as UIView)
-			let optional2 = try? (DIContainer.shared.resolve() as Int)
-			let nonOptional2: Int = try DIContainer.shared.resolve()
+			let nonOptional: UIView = try DISharedContainer.resolve()
+			let list: [UIView] = try DISharedContainer.resolve()
+			let optional = try? (DISharedContainer.resolve() as UIView)
+			let optional2 = try? (DISharedContainer.resolve() as Int)
+			let nonOptional2: Int = try DISharedContainer.resolve()
 			
 			print(nonOptional)
 			print(list)

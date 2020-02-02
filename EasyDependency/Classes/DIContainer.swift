@@ -8,25 +8,14 @@
 
 import Foundation
 
-public protocol OptionalType: ExpressibleByNilLiteral {
-    associatedtype WrappedType
-    var asOptional: WrappedType? { get }
-}
-
-extension Optional: OptionalType {
-    public var asOptional: Wrapped? {
-        return self
-    }
-}
-
 public enum DIError: LocalizedError {
 	case implementationNotFound(name: String)
 	case lostReferenceToContainer
 }
 
-public class DIContainer {
-	public static let shared = DIContainer(container: nil)
-	
+public let DISharedContainer = DIContainer(container: nil)
+
+open class DIContainer {
 	private let superContainer: DIContainer?
     private var registrations: [Any] = []
 	public var logging: Bool = true

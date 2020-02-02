@@ -18,7 +18,7 @@ public struct DIInjectList<Value: Collection> {
 
 	public init() {
 		do {
-			_value = try DIContainer.shared.resolve()
+			_value = try DISharedContainer.resolve()
 		} catch let e {
 			fatalError(e.localizedDescription)
 		}

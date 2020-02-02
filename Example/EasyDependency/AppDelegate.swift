@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
-		try! DIContainer.shared.register(UIView.self) { _ in UILabel(frame: .zero) }
-		try! DIContainer.shared.register(UIView.self) { _ in UIButton(frame: .zero) }
-		try! DIContainer.shared.register(UIView.self) { _ in UISwitch(frame: .zero) }
-		try! DIContainer.shared.register(Int.self) { _ in 1234 }
+		try! DISharedContainer.register(UIView.self) { _ in UILabel(frame: .zero) }
+		try! DISharedContainer.register(UIView.self) { _ in UIButton(frame: .zero) }
+		try! DISharedContainer.register(UIView.self) { _ in UISwitch(frame: .zero) }
+		try! DISharedContainer.register(Int.self) { _ in 1234 }
 		
 		let window = UIWindow(frame: UIScreen.main.bounds)
 		window.rootViewController = ViewController()
