@@ -10,13 +10,9 @@ let package = Package(
         .macOS(.v10_10)
     ],
     products: [
-        .library(name: "EasyDependency", targets: ["EasyDependency"]),
+        .library(name: "EasyDependency", targets: ["EasyDependency"])
     ],
     targets: [
-          .target(
-            name: "EasyDependency",
-            path: "EasyDependency/Classes",
-            publicHeadersPath: ".",
-          )
+		.target(name: "EasyDependency", path: "EasyDependency/Classes", publicHeadersPath: ".")
     ]
 )
