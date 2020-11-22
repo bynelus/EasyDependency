@@ -13,6 +13,10 @@ let package = Package(
         .library(name: "EasyDependency", targets: ["EasyDependency"])
     ],
     targets: [
-		.target(name: "EasyDependency", path: "EasyDependency/Classes", publicHeadersPath: ".")
+		.target(
+			name: "EasyDependency",
+			path: "EasyDependency/Classes",
+			exclude: ["Example/*", "EasyDependency.podspec"],
+			publicHeadersPath: ".")
     ]
 )
