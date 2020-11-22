@@ -16,7 +16,7 @@ let package = Package(
 		.target(
 			name: "EasyDependency",
 			path: "EasyDependency/Classes",
-			exclude: ["Example/*", "EasyDependency.podspec"],
+			exclude: ["Example", "EasyDependency.podspec"],
 			publicHeadersPath: ".")
     ]
 )
