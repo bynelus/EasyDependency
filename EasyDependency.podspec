@@ -13,6 +13,6 @@ There is no focus on adding support for circular dependencies. Simplicity is key
   s.swift_version 	 = '5.1'
   s.social_media_url = 'https://twitter.com/NielsKoole'
   s.source_files 	 = 'EasyDependency/Classes/**/*'
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
 end
